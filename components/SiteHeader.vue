@@ -53,12 +53,12 @@ onMounted(() => document.addEventListener('click', onDocClick))
 onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
 
 const anchors = [
-  { label: 'Ecosistema', href: '#ecosistema' },
-  { label: 'Campagna', href: '#campagna' },
-  { label: 'KPI', href: '#kpi' },
-  { label: 'Mantenimento', href: '#mantenimento' },
-  { label: 'Scenario', href: '#scenario' },
-  { label: 'Download', href: '#download' }
+  { label: 'Il settore', href: '#ecosistema' },
+  { label: 'Cosa impari', href: '#campagna' },
+  { label: 'Esperienza', href: '#kpi' },
+  { label: 'Testimonianze', href: '#mantenimento' },
+  { label: 'Open day', href: '#scenario' },
+  { label: 'Contatti', href: '#download' }
 ]
 </script>
 
