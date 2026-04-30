@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Black background -->
+  <rect width="512" height="512" fill="#000000"/>
+  
+  <!-- White "D" letter (split design) -->
+  <g fill="#FFFFFF">
+    <!-- Top left curve -->
+    <path d="M 80 80 Q 200 80 250 130 Q 256 136 256 200 L 256 256 L 80 256 Z"/>
+    
+    <!-- Bottom left curve -->
+    <path d="M 80 256 L 256 256 L 256 312 Q 256 376 250 382 Q 200 432 80 432 Z"/>
+    
+    <!-- Right circle -->
+    <circle cx="356" cy="256" r="140" fill="#FFFFFF"/>
+  </g>
+</svg>
