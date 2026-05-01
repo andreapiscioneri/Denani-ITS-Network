@@ -200,7 +200,7 @@ onMounted(() => {
     grid-template-columns: 1fr 1fr;
     gap: 4px 12px;
     padding: 16px;
-    background: var(--fog);
+    background: transparent;
     border-radius: var(--radius-lg);
     border-bottom: none !important;
   }

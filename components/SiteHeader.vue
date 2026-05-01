@@ -74,35 +74,6 @@ const anchors = [
       </NuxtLink>
 
       <nav class="nav-main" aria-label="Navigazione principale">
-        <div class="sector-dropdown">
-          <button
-            class="sector-toggle"
-            :class="{ active: sectorMenuOpen }"
-            @click.stop="toggleSectorMenu"
-            aria-haspopup="true"
-            :aria-expanded="sectorMenuOpen"
-          >
-            Settori
-            <span class="caret">▾</span>
-          </button>
-          <div v-if="sectorMenuOpen" class="sector-menu">
-            <NuxtLink
-              v-for="s in sectorsList"
-              :key="s.slug"
-              :to="`/settori/${s.slug}`"
-              class="sector-item"
-              :class="{ active: s.slug === props.currentSector }"
-              @click="sectorMenuOpen = false"
-            >
-              <span class="sector-dot" :style="{ background: s.accent }"></span>
-              <div>
-                <div class="sector-item-name">{{ s.name }}</div>
-                <div class="sector-item-filiera">{{ s.filiera }}</div>
-              </div>
-            </NuxtLink>
-          </div>
-        </div>
-
         <template v-if="props.showAnchors">
           <a v-for="a in anchors" :key="a.href" :href="a.href" @click="handleAnchor($event, a.href)">{{ a.label }}</a>
         </template>
@@ -124,19 +95,6 @@ const anchors = [
     </div>
 
     <nav v-if="mobileMenuOpen" class="nav-mobile" aria-label="Navigazione mobile">
-      <div class="nav-mobile-section">
-        <div class="nav-mobile-label">Settori</div>
-        <NuxtLink
-          v-for="s in sectorsList"
-          :key="s.slug"
-          :to="`/settori/${s.slug}`"
-          class="nav-mobile-sector"
-          @click="mobileMenuOpen = false"
-        >
-          <span class="sector-dot" :style="{ background: s.accent }"></span>
-          {{ s.name }}
-        </NuxtLink>
-      </div>
       <template v-if="props.showAnchors">
         <div class="nav-mobile-section">
           <div class="nav-mobile-label">Sezioni</div>
@@ -150,14 +108,18 @@ const anchors = [
 <style scoped>
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 18px 32px;
+  padding: 16px clamp(16px, 2.4vw, 32px);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  background: rgba(255, 255, 255, 0.72);
-  border-bottom: 1px solid var(--line);
+  background: rgba(5, 8, 15, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: all 0.4s var(--ease);
 }
-.site-header.scrolled { padding: 12px 32px; background: rgba(255, 255, 255, 0.92); }
+.site-header.scrolled {
+  padding: 10px clamp(16px, 2.4vw, 32px);
+  background: rgba(5, 8, 15, 0.88);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
 .header-inner { max-width: 1320px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .brand-mark { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-mark .logo-fondazione {
@@ -167,31 +129,31 @@ const anchors = [
   line-height: 1;
   letter-spacing: -0.02em;
 }
-.brand-mark .logo-fondazione .blue { color: var(--navy); }
-.brand-mark .logo-fondazione .green { color: var(--sector-accent, #1E8B3F); }
+.brand-mark .logo-fondazione .blue { color: #fff; }
+.brand-mark .logo-fondazione .green { color: #0066ff; }
 .brand-mark .tagline {
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--slate-light);
-  border-left: 1px solid var(--line);
+  color: rgba(255,255,255,0.4);
+  border-left: 1px solid rgba(255,255,255,0.12);
   padding-left: 12px;
   font-weight: 500;
 }
 
 .nav-main { display: flex; gap: 28px; align-items: center; }
 .nav-main a, .nav-main .sector-toggle {
-  font-size: 0.9375rem; color: var(--navy-deep); text-decoration: none;
+  font-size: 0.9375rem; color: rgba(255,255,255,0.68); text-decoration: none;
   font-weight: 500; position: relative; transition: color 0.3s var(--ease);
   background: none; border: none; cursor: pointer; font-family: inherit;
   padding: 0;
 }
 .nav-main a::after {
   content: ''; position: absolute; bottom: -6px; left: 0; right: 0; height: 1px;
-  background: var(--sector-accent, var(--navy)); transform: scaleX(0); transform-origin: right;
+  background: #0066ff; transform: scaleX(0); transform-origin: right;
   transition: transform 0.4s var(--ease);
 }
-.nav-main a:hover { color: var(--sector-accent, var(--navy)); }
+.nav-main a:hover { color: #fff; }
 .nav-main a:hover::after { transform: scaleX(1); transform-origin: left; }
 
 .sector-dropdown { position: relative; }
@@ -276,7 +238,7 @@ const anchors = [
 .hamburger span {
   width: 24px;
   height: 2px;
-  background: var(--navy-deep);
+  background: rgba(255,255,255,0.85);
   border-radius: 1px;
   transition: all 0.3s var(--ease);
 }
@@ -290,10 +252,12 @@ const anchors = [
   top: 60px;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.98);
-  border-bottom: 1px solid var(--line);
+  background: rgba(5, 8, 15, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   flex-direction: column;
-  padding: 24px 32px 32px;
+  padding: 20px clamp(16px, 2.4vw, 32px) 28px;
   gap: 24px;
   max-height: 80vh;
   overflow-y: auto;
@@ -303,26 +267,64 @@ const anchors = [
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--slate-light);
+  color: rgba(255,255,255,0.35);
   font-weight: 600;
   margin-bottom: 4px;
 }
 .nav-mobile a, .nav-mobile-sector {
   display: flex; align-items: center; gap: 10px;
   font-size: 1rem;
-  color: var(--navy-deep);
+  color: rgba(255,255,255,0.68);
   text-decoration: none;
   font-weight: 500;
   padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .nav-mobile-sector .sector-dot { margin-top: 0; }
-.nav-mobile a:hover, .nav-mobile-sector:hover { color: var(--sector-accent, var(--navy)); }
+.nav-mobile a:hover, .nav-mobile-sector:hover { color: #fff; }
 
 @media (max-width: 980px) {
   .nav-main { display: none; }
-  .quality-seal { display: none; }
   .hamburger { display: flex; }
   .nav-mobile { display: flex; }
   .tagline { display: none; }
+  .brand-mark { margin-right: auto; }
+  .quality-seal {
+    margin-left: auto;
+    margin-right: 2px;
+  }
+}
+@media (max-width: 760px) {
+  .header-inner {
+    gap: 10px;
+  }
+  .quality-seal {
+    padding: 6px 9px;
+  }
+  .seal-text {
+    gap: 4px;
+  }
+  .hamburger {
+    margin: -6px;
+    padding: 6px;
+  }
+  .hamburger span {
+    width: 22px;
+  }
+}
+@media (max-width: 540px) {
+  .brand-mark .logo-fondazione {
+    font-size: 0.92rem;
+  }
+  .quality-seal {
+    padding: 6px 7px;
+    gap: 7px;
+  }
+  .seal-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .denani-logo { height: 14px; }
+  .quality-seal .seal-text small { display: none; }
 }
 </style>

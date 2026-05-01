@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="portal-page">
     <SiteHeader />
     <main>
       <section class="home-hero">
@@ -56,7 +56,7 @@ onMounted(() => {
           <div data-reveal>
             <div class="hero-eyebrow">
               <span class="pulse"></span>
-              <span class="eyebrow-text">Framework replicabile · 5 filiere ITS</span>
+              <span class="eyebrow-text">Framework replicabile · 7 filiere ITS</span>
               <span class="eyebrow-logos" aria-hidden="true">
                 <img src="/DENANI-LOGO-WHITE.webp" alt="Denani" class="eyebrow-logo" />
               </span>
@@ -68,7 +68,7 @@ onMounted(() => {
             <br />d'Italia.
           </h1>
           <p class="home-hero-sub" data-reveal>
-            Lo stesso modello costruito da <strong>DENANI S.R.L</strong> per <strong>ITS Fondazione Dalmine</strong> — campagna di lancio + mantenimento annuale, KPI iscritti, ecosistema industriale — declinato sulle <strong>cinque filiere ITS</strong> più rilevanti del Nord Italia. Una proposta autonoma per settore, sempre personalizzabile sul singolo ITS interlocutore.
+            Lo stesso modello costruito da <strong>DENANI S.R.L</strong> per <strong>ITS Academy</strong> — campagna di lancio + mantenimento annuale, KPI iscritti, ecosistema industriale — declinato sulle <strong>sette filiere ITS</strong> più rilevanti del Nord Italia. Una proposta autonoma per settore, sempre personalizzabile sul singolo ITS interlocutore.
           </p>
           <div class="hero-cta-row" data-reveal>
             <a href="#settori" class="btn btn-primary">Esplora i Settori<span class="arrow">→</span></a>
@@ -76,7 +76,7 @@ onMounted(() => {
           </div>
 
           <div class="home-stats" data-reveal>
-            <div class="stat-cell"><div class="num">5</div><div class="label">Filiere ITS</div></div>
+            <div class="stat-cell"><div class="num">7</div><div class="label">Filiere ITS</div></div>
             <div class="stat-cell"><div class="num">16</div><div class="label">Mesi · Lancio + Mantenimento</div></div>
             <div class="stat-cell"><div class="num">≥30</div><div class="label">Iscritti target / settore</div></div>
             <div class="stat-cell"><div class="num">44.5k</div><div class="label">€ scenario tipo / anno</div></div>
@@ -90,7 +90,7 @@ onMounted(() => {
       <DownloadSection
         eyebrow="Area Download"
         title="Scarica il framework<br>Denani ITS Network."
-        subtitle="Tutti i dettagli del modello replicabile per le 5 filiere ITS in un documento PDF executive."
+        subtitle="Tutti i dettagli del modello replicabile per le 7 filiere ITS in un documento PDF executive."
       />
     </main>
     <SiteFooter />
@@ -98,13 +98,18 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.portal-page {
+  background: #05080f;
+  color: #fff;
+}
+
 .home-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: min(100vh, 980px);
   display: flex; align-items: center;
   overflow: hidden;
   color: var(--white);
-  padding: 140px 32px 80px;
+  padding: clamp(110px, 12vw, 140px) 0 clamp(56px, 7vw, 84px);
 }
 .home-hero-bg {
   position: absolute; inset: 0;
@@ -162,17 +167,17 @@ onMounted(() => {
 .home-hero h1 { max-width: 14ch; margin-bottom: 24px; }
 .home-hero h1 .accent { color: var(--electric-glow); font-style: italic; font-weight: 400; }
 .home-hero-sub {
-  font-size: clamp(1.0625rem, 1.4vw, 1.3125rem);
+  font-size: clamp(0.98rem, 1.35vw, 1.22rem);
   max-width: 64ch;
   color: rgba(255,255,255,0.78);
-  line-height: 1.55;
-  margin-bottom: 48px;
+  line-height: 1.65;
+  margin-bottom: clamp(28px, 4vw, 44px);
 }
 .home-hero-sub strong { color: var(--white); }
 .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 
 .home-stats {
-  margin-top: 96px;
+  margin-top: clamp(38px, 8vw, 96px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
@@ -182,7 +187,7 @@ onMounted(() => {
   overflow: hidden;
   backdrop-filter: blur(10px);
 }
-.stat-cell { padding: 28px 24px; background: rgba(0,26,61,0.4); }
+.stat-cell { padding: clamp(18px, 3vw, 28px) clamp(16px, 2.6vw, 24px); background: rgba(0,26,61,0.4); }
 .stat-cell .num {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
@@ -201,14 +206,38 @@ onMounted(() => {
 }
 
 @media (max-width: 980px) {
-  .home-hero { padding: 120px 24px 64px; }
+  .home-hero { min-height: auto; }
+  .home-hero-inner { max-width: 760px; }
   .home-stats { grid-template-columns: repeat(2, 1fr); }
 }
+@media (max-width: 760px) {
+  .home-hero-inner {
+    max-width: 460px;
+    margin-left: 0;
+  }
+  .home-hero-sub {
+    max-width: 40ch;
+  }
+  .hero-cta-row {
+    width: 100%;
+    max-width: 320px;
+  }
+  .hero-cta-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 @media (max-width: 600px) {
-  .home-hero { padding: 124px 16px 64px; }
+  .home-hero { padding-top: 116px; }
   .home-stats { grid-template-columns: 1fr 1fr; }
+  .home-hero-inner { max-width: 420px; }
   .home-hero h1 { max-width: 12ch; font-size: 2.25rem; line-height: 1.08; }
   .home-hero-sub { font-size: 0.9375rem; }
   .hero-eyebrow { flex-direction: column; gap: 8px; padding: 14px 18px; text-align: center; }
+}
+@media (max-width: 420px) {
+  .home-stats {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

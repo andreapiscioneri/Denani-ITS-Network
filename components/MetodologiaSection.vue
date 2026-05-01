@@ -45,7 +45,7 @@ const steps = [
 </template>
 
 <style scoped>
-.metodologia { background: var(--fog); }
+.metodologia { background: #07090f; }
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,35 +54,40 @@ const steps = [
   margin: 0 auto;
 }
 .step {
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
   padding: 40px 36px;
   position: relative;
   transition: all 0.5s var(--ease);
 }
-.step:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  border-color: rgba(0,102,255,0.3);
+  background: rgba(255,255,255,0.07);
+}
 .step-num {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--navy);
+  color: #fff;
   letter-spacing: -0.04em;
   line-height: 0.9;
-  opacity: 0.18;
+  opacity: 0.12;
   margin-bottom: 24px;
 }
 .step-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--navy-deep);
+  color: #fff;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
 .step-text {
   font-size: 0.9375rem;
-  color: var(--slate);
+  color: rgba(235,244,255,0.6);
   line-height: 1.6;
   margin-bottom: 28px;
 }
@@ -90,14 +95,26 @@ const steps = [
   display: inline-flex;
   padding: 8px 16px;
   border-radius: 100px;
-  background: var(--fog);
-  border: 1px solid var(--line);
+  background: rgba(0,102,255,0.12);
+  border: 1px solid rgba(0,102,255,0.25);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--navy);
+  color: #4da8ff;
   letter-spacing: 0.02em;
 }
+
+/* section-head scoped per il dark context */
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.2em; font-weight: 700;
+  color: #4da8ff; margin-bottom: 18px;
+}
+.eyebrow::before { content: ''; width: 20px; height: 1px; background: #4da8ff; }
+.section-head h2 { color: #fff; margin-bottom: 18px; }
+.section-head .lead { color: rgba(235,244,255,0.6); line-height: 1.65; }
 
 @media (max-width: 980px) {
   .steps { grid-template-columns: 1fr; }

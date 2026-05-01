@@ -90,6 +90,7 @@ export interface Sector {
   accent: string
   accentGlow: string
   accentSoft: string
+  accentOnDark?: string   // colore testo su bottoni con accent bg (default: #fff, usare #1a1200 per accent chiari)
 
   // Hero
   hero: {
@@ -276,7 +277,7 @@ export const sectors: Record<string, Sector> = {
       titleLead: 'Il Talento della',
       titleAccent: 'Meccatronica',
       titleTrail: 'che muove l\'industria.',
-      subtitle: 'Strategia Marketing Integrata per ITS Academy del settore <strong>meccatronico, automotive e mobilità sostenibile</strong>. Un metodo replicabile costruito da <strong>DENANI S.R.L</strong> sull\'esperienza di <strong>ITS Fondazione Dalmine</strong>, in collaborazione con un ecosistema industriale d\'eccellenza.',
+      subtitle: 'Strategia Marketing Integrata per ITS Academy del settore <strong>meccatronico, automotive e mobilità sostenibile</strong>. Un metodo replicabile costruito da <strong>DENANI S.R.L</strong> sull\'esperienza di <strong>ITS Academy</strong>, in collaborazione con un ecosistema industriale d\'eccellenza.',
       bgImage: '/hero-students.jpg'
     },
 
@@ -285,11 +286,11 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia d\'eccellenza industriale',
       sectionLead: 'La forza dei <strong>founding partner</strong> industriali al servizio della <strong>formazione tecnica</strong> d\'alto livello: meccatronica, automazione, energia e materiali avanzati.',
       logos: [
-        { name: 'Brembo' },
-        { name: 'Tenaris' },
-        { name: 'Lovato Electric' },
-        { name: 'ABB Italia' },
-        { name: 'Camozzi Group' }
+        { name: 'Brembo', src: 'https://logo.clearbit.com/brembo.com' },
+        { name: 'Tenaris', src: 'https://logo.clearbit.com/tenaris.com' },
+        { name: 'Lovato Electric', src: 'https://logo.clearbit.com/lovato.it' },
+        { name: 'ABB Italia', src: 'https://logo.clearbit.com/abb.com' },
+        { name: 'Camozzi Group', src: 'https://logo.clearbit.com/camozzi.com' }
       ],
       ecosystem: [
         {
@@ -364,7 +365,7 @@ export const sectors: Record<string, Sector> = {
         { name: 'ITS Lombardia Meccatronica', region: 'Lombardia' },
         { name: 'ITS Maker', region: 'Emilia-Romagna' },
         { name: 'ITS Tech Talent Factory', region: 'Lombardia' },
-        { name: 'ITS Fondazione Dalmine', region: 'Bergamo, Lombardia' },
+        { name: 'ITS Academy', region: 'Bergamo, Lombardia' },
         { name: 'ITS Meccatronico Veneto', region: 'Veneto' },
         { name: 'ITS Meccatronico Piemonte', region: 'Piemonte' }
       ]
@@ -380,9 +381,10 @@ export const sectors: Record<string, Sector> = {
     shortName: 'Energia',
     filiera: 'ITS Energia · Ambiente · Sostenibilità',
 
-    accent: '#00C896',
-    accentGlow: '#3FE5B6',
-    accentSoft: 'rgba(0, 200, 150, 0.12)',
+    accent: '#F59E0B',
+    accentGlow: '#FBBF24',
+    accentSoft: 'rgba(245, 158, 11, 0.12)',
+    accentOnDark: '#1a1000',
 
     hero: {
       eyebrow: 'Filiera Energia · Impiantistica · Edilizia Sostenibile',
@@ -398,11 +400,11 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia per il futuro sostenibile',
       sectionLead: 'I <strong>founding partner</strong> dell\'energia e dell\'impiantistica al servizio della <strong>formazione tecnica</strong> d\'alto livello: rinnovabili, efficienza, edilizia evoluta, smart building.',
       logos: [
-        { name: 'Enel' },
-        { name: 'A2A' },
-        { name: 'Edison' },
-        { name: 'Riello' },
-        { name: 'Saipem' }
+        { name: 'Enel', src: 'https://logo.clearbit.com/enel.com' },
+        { name: 'A2A', src: 'https://logo.clearbit.com/a2a.eu' },
+        { name: 'Edison', src: 'https://logo.clearbit.com/edison.it' },
+        { name: 'Riello', src: 'https://logo.clearbit.com/riello.com' },
+        { name: 'Saipem', src: 'https://logo.clearbit.com/saipem.com' }
       ],
       ecosystem: [
         {
@@ -508,11 +510,11 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia tra system integrator d\'eccellenza',
       sectionLead: 'I <strong>founding partner</strong> dell\'ICT al servizio della <strong>formazione tecnica</strong> d\'alto livello: sviluppo software, cybersecurity, cloud, AI applicata e digital transformation per l\'industria.',
       logos: [
-        { name: 'Reply' },
-        { name: 'Engineering' },
-        { name: 'NTT Data' },
-        { name: 'Vimar' },
-        { name: 'Italtel' }
+        { name: 'Reply', src: 'https://logo.clearbit.com/reply.com' },
+        { name: 'Engineering', src: 'https://logo.clearbit.com/eng.it' },
+        { name: 'NTT Data', src: 'https://logo.clearbit.com/nttdata.com' },
+        { name: 'Vimar', src: 'https://logo.clearbit.com/vimar.com' },
+        { name: 'Italtel', src: 'https://logo.clearbit.com/italtel.com' }
       ],
       ecosystem: [
         {
@@ -621,11 +623,11 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia con i grandi marchi del food italiano',
       sectionLead: 'I <strong>founding partner</strong> dell\'agroalimentare al servizio della <strong>formazione tecnica</strong> d\'alto livello: produzione industriale, food safety, supply chain, packaging sostenibile e tecnologie agroalimentari 4.0.',
       logos: [
-        { name: 'Barilla' },
-        { name: 'Lavazza' },
-        { name: 'Granarolo' },
-        { name: 'Galbani' },
-        { name: 'Sammontana' }
+        { name: 'Barilla', src: 'https://logo.clearbit.com/barilla.com' },
+        { name: 'Lavazza', src: 'https://logo.clearbit.com/lavazza.it' },
+        { name: 'Granarolo', src: 'https://logo.clearbit.com/granarolo.com' },
+        { name: 'Galbani', src: 'https://logo.clearbit.com/galbani.it' },
+        { name: 'Sammontana', src: 'https://logo.clearbit.com/sammontana.com' }
       ],
       ecosystem: [
         {
@@ -717,6 +719,7 @@ export const sectors: Record<string, Sector> = {
     accent: '#C8A45E',
     accentGlow: '#E0BE7A',
     accentSoft: 'rgba(200, 164, 94, 0.12)',
+    accentOnDark: '#1a1200',
 
     hero: {
       eyebrow: 'Filiera Tessile · Pelletteria · Manifattura · Design',
@@ -732,11 +735,11 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia con le maison del lusso e della manifattura',
       sectionLead: 'I <strong>founding partner</strong> del Sistema Moda al servizio della <strong>formazione tecnica</strong> d\'alto livello: pelletteria, tessile, modelleria, calzaturificio e tecnologie applicate al lusso e al design industriale.',
       logos: [
-        { name: 'Tod\'s' },
-        { name: 'Brunello Cucinelli' },
-        { name: 'Loro Piana' },
-        { name: 'Lonati' },
-        { name: 'Damiani' }
+        { name: 'Tod\'s', src: 'https://logo.clearbit.com/tods.com' },
+        { name: 'Brunello Cucinelli', src: 'https://logo.clearbit.com/brunellocucinelli.com' },
+        { name: 'Loro Piana', src: 'https://logo.clearbit.com/loropiana.com' },
+        { name: 'Lonati', src: 'https://logo.clearbit.com/lonati.com' },
+        { name: 'Damiani', src: 'https://logo.clearbit.com/damiani.com' }
       ],
       ecosystem: [
         {
@@ -812,6 +815,166 @@ export const sectors: Record<string, Sector> = {
         { name: 'ITS Machina Lonati', region: 'Brescia, Lombardia' },
         { name: 'ITS Last', region: 'Veneto' }
       ]
+    }
+  },
+
+  // 6. MOBILITÀ & AUTOMOTIVE
+  // -------------------------------------------------------------------------
+  'mobilita-automotive': {
+    slug: 'mobilita-automotive',
+    name: 'Mobilità & Automotive',
+    shortName: 'Automotive',
+    filiera: 'ITS Mobilità · EV · Automotive Performance',
+
+    accent: '#DC2626',
+    accentGlow: '#F87171',
+    accentSoft: 'rgba(220, 38, 38, 0.12)',
+
+    hero: {
+      eyebrow: 'Filiera Automotive · EV · Sistemi ADAS · Mobilità Intelligente',
+      titleLead: 'Guida',
+      titleAccent: 'la mobilità del futuro',
+      titleTrail: 'elettrica e connessa.',
+      subtitle: 'Percorsi ITS per tecnici specializzati nei sistemi EV, diagnostica avanzata e automotive di nuova generazione. Collegati alle imprese tier 1 e OEM del territorio lombardo.',
+      bgImage: '/hero-students.jpg'
+    },
+
+    partners: {
+      sectionEyebrow: "L'Ecosistema Automotive",
+      sectionTitle: 'Le imprese che guidano la transizione elettrica',
+      sectionLead: 'I <strong>partner industriali</strong> del settore automotive al servizio della <strong>formazione tecnica</strong> specializzata: OEM, tier 1, motorsport e mobility service.',
+      logos: [
+        { name: 'Brembo', src: 'https://logo.clearbit.com/brembo.com' },
+        { name: 'Stellantis', src: 'https://logo.clearbit.com/stellantis.com' },
+        { name: 'Bosch', src: 'https://logo.clearbit.com/bosch.com' },
+        { name: 'Continental', src: 'https://logo.clearbit.com/continental.com' },
+        { name: 'Dana', src: 'https://logo.clearbit.com/dana.com' }
+      ],
+      ecosystem: [
+        {
+          name: 'Brembo',
+          role: 'Founding Partner · Frenatura & Performance',
+          tagline: 'Leader mondiale nei sistemi frenanti ad alte prestazioni: tecnologia, innovazione e presenza in Formula 1.',
+          gradient: 'linear-gradient(135deg, #2a0606 0%, #150303 100%)'
+        },
+        {
+          name: 'Bosch',
+          role: 'Founding Partner · Sistemi Automotive',
+          tagline: 'Tecnologia di punta per ADAS, powertrain elettrico e sistemi di controllo: il partner tech di ogni grande OEM.',
+          gradient: 'linear-gradient(135deg, #1a0808 0%, #0d0404 100%)'
+        },
+        {
+          name: 'Continental',
+          role: 'Founding Partner · EV & Pneumatici',
+          tagline: 'Sistemi elettronici, pneumatici intelligenti e soluzioni per la mobilità connessa del futuro.',
+          gradient: 'linear-gradient(135deg, #200a0a 0%, #100505 100%)'
+        }
+      ]
+    },
+
+    pricing: { eyebrow: 'Campagna · 4 Mesi', title: 'Piani lancio Mobilità.', lead: 'Campagna iscrizioni percorsi automotive e mobilità elettrica.', plans: basePlans },
+
+    kpi: {
+      eyebrow: 'KPI Iscritti Attesi', title: 'Proiezioni settore automotive.', lead: 'Benchmark education automotive.',
+      rows: [
+        { budget: '2.000 — 3.000€', result: 'iscritti', num: '20-30', platforms: [{ label: 'Meta', views: '~130.000' }], tag: 'Entry Level' },
+        { budget: '3.000 — 5.000€', result: 'iscritti', num: '≥35', platforms: [{ label: 'Meta', views: '~140.000' }, { label: 'Google', views: '~90.000' }], tag: 'Target Ottimale', high: true },
+        { budget: '5.000 — 7.000€', result: 'iscritti', num: '40-58', platforms: [{ label: 'Meta', views: '~130.000' }, { label: 'TikTok', views: '~210.000' }, { label: 'Google', views: '~80.000' }], tag: 'Performance Massima' }
+      ],
+      disclaimer: 'Benchmark settore automotive education. Alta attrattività del mondo EV e motorsport tra i giovani.'
+    },
+
+    maintenance: { eyebrow: 'Mantenimento · 12 Mesi', title: 'Brand continuity automotive.', lead: 'Social management e contenuti tecnici per il settore automotive.', tiers: baseMaintenanceTiers, ads: baseMaintenanceAds, videoNotes: baseVideoNotes },
+
+    scenario: { eyebrow: 'Scenario Economico', title: 'Investimento strategico', lead: 'Piano economico ITS Mobilità & Automotive.', rows: baseScenarioRows, total: '44.500 €' },
+
+    download: { eyebrow: 'Area Download', title: 'Scarica la proposta<br>Mobilità & Automotive.', subtitle: 'Strategia marketing per il settore automotive in un PDF executive.', pdfPath: '#' },
+
+    meta: {
+      pageTitle: 'Mobilità & Automotive — ITS Academy',
+      description: 'Percorsi ITS specializzati in sistemi EV, diagnostica avanzata e automotive di nuova generazione. Collegati alle imprese leader del territorio lombardo.',
+      keywords: 'ITS automotive, ITS mobilità, EV tecnico, percorso automotive Bergamo, formazione automotive Lombardia',
+      exampleITS: [{ name: 'ITS Academy', region: 'Bergamo, Lombardia' }]
+    }
+  },
+
+  // 7. INDUSTRIA DIGITALE & SMART FACTORY
+  // -------------------------------------------------------------------------
+  'industria-digitale': {
+    slug: 'industria-digitale',
+    name: 'Industria Digitale & Smart Factory',
+    shortName: 'Industria Digitale',
+    filiera: 'ITS Industria 4.0 · AI · Smart Factory · Digital Twin',
+
+    accent: '#0891B2',
+    accentGlow: '#22D3EE',
+    accentSoft: 'rgba(8, 145, 178, 0.12)',
+
+    hero: {
+      eyebrow: 'Filiera Industry 4.0 · AI Industriale · Digital Twin · Smart Factory',
+      titleLead: 'Entra',
+      titleAccent: "nell'industria che pensa",
+      titleTrail: 'grazie a AI e digital twin.',
+      subtitle: 'Percorsi ITS per tecnici specializzati in Industry 4.0, intelligenza artificiale applicata, digital twin e smart factory. La formazione per le fabbriche intelligenti di Lombardia.',
+      bgImage: '/hero-students.jpg'
+    },
+
+    partners: {
+      sectionEyebrow: "L'Ecosistema Industry 4.0",
+      sectionTitle: 'Le imprese che costruiscono la fabbrica intelligente',
+      sectionLead: 'I <strong>partner industriali</strong> per la <strong>formazione tecnica avanzata</strong> su AI industriale, digital twin e smart factory.',
+      logos: [
+        { name: 'Siemens', src: 'https://logo.clearbit.com/siemens.com' },
+        { name: 'Rockwell', src: 'https://logo.clearbit.com/rockwellautomation.com' },
+        { name: 'Fanuc', src: 'https://logo.clearbit.com/fanuc.co.jp' },
+        { name: 'Comau', src: 'https://logo.clearbit.com/comau.com' },
+        { name: 'Camozzi', src: 'https://logo.clearbit.com/camozzi.com' }
+      ],
+      ecosystem: [
+        {
+          name: 'Siemens',
+          role: 'Founding Partner · Digital Industries',
+          tagline: 'Leader globale nella digitalizzazione industriale: SCADA, digital twin, MindSphere e automazione avanzata.',
+          gradient: 'linear-gradient(135deg, #020e18 0%, #010709 100%)'
+        },
+        {
+          name: 'Fanuc',
+          role: 'Founding Partner · AI Robotica',
+          tagline: 'Robot industriali con AI integrata per manifattura flessibile, cobot e visione artificiale.',
+          gradient: 'linear-gradient(135deg, #031218 0%, #020a10 100%)'
+        },
+        {
+          name: 'Comau',
+          role: 'Founding Partner · Smart Manufacturing',
+          tagline: 'Soluzioni di automazione avanzata e digital manufacturing per la produzione di nuova generazione.',
+          gradient: 'linear-gradient(135deg, #041420 0%, #020c16 100%)'
+        }
+      ]
+    },
+
+    pricing: { eyebrow: 'Campagna · 4 Mesi', title: 'Piani lancio Industry 4.0.', lead: 'Campagna iscrizioni percorsi smart factory e industria digitale.', plans: basePlans },
+
+    kpi: {
+      eyebrow: 'KPI Iscritti Attesi', title: 'Proiezioni settore digitale.', lead: 'Benchmark education Industry 4.0.',
+      rows: [
+        { budget: '2.000 — 3.000€', result: 'iscritti', num: '18-28', platforms: [{ label: 'Meta', views: '~125.000' }], tag: 'Entry Level' },
+        { budget: '3.000 — 5.000€', result: 'iscritti', num: '≥32', platforms: [{ label: 'Meta', views: '~135.000' }, { label: 'Google', views: '~88.000' }], tag: 'Target Ottimale', high: true },
+        { budget: '5.000 — 7.000€', result: 'iscritti', num: '38-55', platforms: [{ label: 'Meta', views: '~125.000' }, { label: 'TikTok', views: '~200.000' }, { label: 'Google', views: '~75.000' }], tag: 'Performance Massima' }
+      ],
+      disclaimer: 'Benchmark settore tech education. Alta attrattività AI e digitale tra i giovani 18-22.'
+    },
+
+    maintenance: { eyebrow: 'Mantenimento · 12 Mesi', title: 'Brand continuity Industry 4.0.', lead: 'Social management e contenuti tecnici per smart factory e AI industriale.', tiers: baseMaintenanceTiers, ads: baseMaintenanceAds, videoNotes: baseVideoNotes },
+
+    scenario: { eyebrow: 'Scenario Economico', title: 'Investimento strategico', lead: 'Piano economico ITS Industria Digitale & Smart Factory.', rows: baseScenarioRows, total: '44.500 €' },
+
+    download: { eyebrow: 'Area Download', title: 'Scarica la proposta<br>Industria Digitale.', subtitle: 'Strategia marketing per Industry 4.0 e smart factory in un PDF executive.', pdfPath: '#' },
+
+    meta: {
+      pageTitle: 'Industria Digitale & Smart Factory — ITS Academy',
+      description: 'Percorsi ITS specializzati in Industry 4.0, AI industriale, digital twin e smart factory. Formazione tecnica avanzata per le fabbriche intelligenti della Lombardia.',
+      keywords: 'ITS industria digitale, ITS smart factory, Industry 4.0 Bergamo, digital twin formazione, AI industriale Lombardia',
+      exampleITS: [{ name: 'ITS Academy', region: 'Bergamo, Lombardia' }]
     }
   }
 

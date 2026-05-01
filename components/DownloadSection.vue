@@ -56,7 +56,7 @@ const onDownload = (e: MouseEvent) => {
 <style scoped>
 .pre-footer {
   background: var(--navy-deep);
-  padding: 120px 32px;
+  padding: clamp(60px, 9vw, 120px) 0;
   position: relative;
   overflow: hidden;
 }
@@ -82,7 +82,7 @@ const onDownload = (e: MouseEvent) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 64px;
+  gap: clamp(24px, 4vw, 64px);
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
@@ -125,7 +125,7 @@ const onDownload = (e: MouseEvent) => {
 .download-visual:hover { transform: translateY(-4px); }
 
 .download-visual .icon {
-  width: 120px; height: 120px;
+  width: clamp(96px, 12vw, 120px); height: clamp(96px, 12vw, 120px);
   background: linear-gradient(160deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
   border: 1.5px solid rgba(255,255,255,0.2);
   border-radius: 28px;
@@ -152,5 +152,8 @@ const onDownload = (e: MouseEvent) => {
   .pre-footer-inner { flex-direction: column; align-items: flex-start; gap: 40px; }
   .pre-footer-action { width: 100%; display: flex; justify-content: center; }
   .download-visual { align-items: center; }
+  .pre-footer-text h2 {
+    font-size: clamp(1.55rem, 7vw, 2.1rem);
+  }
 }
 </style>

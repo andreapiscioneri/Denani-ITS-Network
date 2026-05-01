@@ -11,7 +11,9 @@ const navLinks = [
   { label: 'Energia & Ambiente', href: '/settori/energia-ambiente' },
   { label: 'ICT & Digital', href: '/settori/ict-digital' },
   { label: 'Agroalimentare', href: '/settori/agroalimentare' },
-  { label: 'Sistema Moda', href: '/settori/sistema-moda' }
+  { label: 'Sistema Moda', href: '/settori/sistema-moda' },
+  { label: 'Mobilità Sostenibile', href: '/settori/mobilita-automotive' },
+  { label: 'Industria Digitale', href: '/settori/industria-digitale' }
 ]
 
 const founding = computed(() => {
@@ -74,6 +76,9 @@ const contactLinks = [
       <div class="footer-bottom">
         <div>© 2026 · Tutti i diritti riservati a Denani S.R.L</div>
         <div class="social-row">
+          <a href="https://www.youtube.com/@denanisrl" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
           <a href="https://www.linkedin.com/company/denanisrl/posts/?feedView=all" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
@@ -93,13 +98,13 @@ const contactLinks = [
 </template>
 
 <style scoped>
-.site-footer { background: var(--black); color: rgba(255,255,255,0.6); padding: 80px 32px 40px; }
+.site-footer { background: var(--black); color: rgba(255,255,255,0.6); padding: clamp(56px, 8vw, 80px) 0 clamp(26px, 4vw, 40px); }
 .footer-inner { max-width: 1320px; margin: 0 auto; }
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 56px;
-  padding-bottom: 56px;
+  gap: clamp(26px, 4vw, 56px);
+  padding-bottom: clamp(26px, 4vw, 56px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .footer-denani-logo { height: 60px; width: auto; margin-bottom: 16px; display: block; }
@@ -148,5 +153,9 @@ const contactLinks = [
 }
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom {
+    padding-top: 24px;
+    gap: 14px;
+  }
 }
 </style>

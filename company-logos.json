@@ -1,0 +1,227 @@
+{
+  "Meccatronica": {
+    "Tenaris": {
+      "sito": "https://www.tenaris.com",
+      "logo": "https://www.tenaris.com/en",
+      "nota": "Logo disponibile nel header del sito - formato SVG"
+    },
+    "Brembo": {
+      "sito": "https://www.brembo.com",
+      "logo": "https://www.brembo.com/_next/image?url=https%3A%2F%2Fbrem-p-001.sitecorecontenthub.cloud%2Fapi%2Fpublic%2Fcontent%2F...",
+      "nota": "Logo su CDN Sitecore - contattare per link pubblico"
+    },
+    "Avio Aero": {
+      "sito": "https://www.avioaero.it",
+      "logo": null,
+      "nota": "Sito reindirizzato - logo non accessibile direttamente"
+    },
+    "Lovato Electric": {
+      "sito": "https://www.lovato.it",
+      "logo": null,
+      "nota": "Logo disponibile in bianco nel footer - contattare azienda"
+    },
+    "Cosberg": {
+      "sito": "https://www.cosberg.com",
+      "logo": null,
+      "nota": "Logo disponibile nel header - non URL diretto pubblico"
+    },
+    "Gewiss": {
+      "sito": "https://www.gewiss.com",
+      "logo": "https://www.gewiss.com/it/it",
+      "nota": "Logo nel header e nei documenti - richiedere media kit"
+    }
+  },
+  "Energia": {
+    "A2A": {
+      "sito": "https://gruppoa2a.it",
+      "logo": "https://gruppoa2a.it",
+      "nota": "Logo nel header - contattare per versione alta risoluzione"
+    },
+    "Enel Green Power": {
+      "sito": "https://www.enelgreenpower.com",
+      "logo": "https://www.enelgreenpower.com",
+      "nota": "Logo disponibile nel footer"
+    },
+    "ABB": {
+      "sito": "https://www.abb.com",
+      "logo": "https://www.abb.com/global/en",
+      "nota": "Logo nel header - contattare per media kit"
+    },
+    "Schneider Electric": {
+      "sito": "https://www.se.com",
+      "logo": "https://www.se.com/ww/en",
+      "nota": "Logo nel footer"
+    },
+    "Siemens": {
+      "sito": "https://www.siemens.com",
+      "logo": "https://www.siemens.com/it-it/",
+      "nota": "Logo nel header"
+    }
+  },
+  "ICT": {
+    "Leonardo": {
+      "sito": "https://www.leonardo.com",
+      "logo": "https://www.leonardo.com/it",
+      "nota": "Logo nel header - contattare per media kit ufficiale"
+    },
+    "Cisco": {
+      "sito": "https://www.cisco.com",
+      "logo": "https://www.cisco.com/site/us/en/about/index.html",
+      "nota": "Logo disponibile - contattare per versione ufficiale"
+    },
+    "Huawei": {
+      "sito": "https://www.huawei.com",
+      "logo": "https://www.huawei.com/en",
+      "nota": "Logo nel header"
+    },
+    "Fastweb": {
+      "sito": "https://www.fastweb.it",
+      "logo": "https://www.fastweb.it/adsl-fibra-ottica/gfx/dual/logo_black.svg",
+      "nota": "Logo SVG disponibile (formato: SVG)"
+    },
+    "Engineering": {
+      "sito": "https://www.eng.it",
+      "logo": "https://www.eng.it/it",
+      "nota": "Logo nel footer"
+    },
+    "Var Group": {
+      "sito": "https://www.vargroup.com",
+      "logo": "https://www.vargroup.com/-/media/Project/Var-Group-Tenant/Var-Group-Corporate-Website/Logos/LogoVarGroupWeb3x-4.png",
+      "nota": "Logo PNG disponibile"
+    }
+  },
+  "Agroalimentare": {
+    "Barilla": {
+      "sito": "https://www.barilla.com",
+      "logo": null,
+      "nota": "Sito protetto da HTTP 403 - contattare direttamente"
+    },
+    "Granarolo": {
+      "sito": "https://www.granarolo.it",
+      "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAAuCAYAAABDLLXWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABLFSURBVHhe7VsLeFTlmc62ddW166VtWtu1a22rEVDkEbZCEkyTEBJBkplzzuROUVeRLbI8VOmF1dJWS9u11FpLu94FCjQhk5lzZjKTC4HkIqCWpd5IRDGBCCQkZ9/3n39iwsW17fOs6/PMx/M/Z/Lf//f//u97v/8c0lKSkjRH2DtZa/c/oEa865VIQ41iGhvspr7WHnQ9...",
+      "nota": "Logo PNG base64 nel codice - richiedere versione originale"
+    },
+    "Lavazza": {
+      "sito": "https://www.lavazza.com",
+      "logo": "https://www.lavazza.com/en",
+      "nota": "Logo nel header"
+    },
+    "Ferrero": {
+      "sito": "https://www.ferrero.com",
+      "logo": "https://www.ferrero.com/it/it/",
+      "nota": "Logo nel header"
+    },
+    "Nestlé Italia": {
+      "sito": "https://www.nestle.it",
+      "logo": null,
+      "nota": "Sito protetto - contattare direttamente"
+    },
+    "Inalca": {
+      "sito": "https://www.inalca.it",
+      "logo": "https://www.inalca.it/it",
+      "nota": "Logo nel header"
+    }
+  },
+  "Moda": {
+    "Versace": {
+      "sito": "https://www.versace.com",
+      "logo": "https://www.versace.com/it/it/",
+      "nota": "Logo nel header e footer"
+    },
+    "OTB Group": {
+      "sito": "https://otbgroup.co.za",
+      "logo": "https://static.wixstatic.com/media/1ff384_5e7925337e56424d8922612e84e60256~mv2.png",
+      "nota": "Logo bianco disponibile - Nota: questo sito è OTB Advisory (Sud Africa), non il vero OTB Group"
+    },
+    "Corneliani": {
+      "sito": "https://www.corneliani.com",
+      "logo": null,
+      "nota": "Certificato SSL non valido - contattare direttamente"
+    },
+    "Brembana & Rolle": {
+      "sito": "N/A",
+      "logo": null,
+      "nota": "Azienda storica - contattare direttamente per logo"
+    },
+    "Marzotto": {
+      "sito": "https://www.marzottogroup.it",
+      "logo": "https://www.marzottogroup.it",
+      "nota": "Logo nel header"
+    },
+    "Loro Piana": {
+      "sito": "https://it.loropiana.com",
+      "logo": null,
+      "nota": "Sito protetto da HTTP 403 - contattare Louis Vuitton (proprietario)"
+    }
+  },
+  "Automotive": {
+    "Stellantis": {
+      "sito": "https://www.stellantis.com",
+      "logo": "https://www.stellantis.com/it",
+      "nota": "Logo nel header"
+    },
+    "Bosch": {
+      "sito": "https://www.bosch.com",
+      "logo": "https://www.bosch.com/",
+      "nota": "Logo nel header"
+    },
+    "Continental": {
+      "sito": "https://www.continental.com",
+      "logo": "https://www.continental.com/en/",
+      "nota": "Logo nel header"
+    },
+    "Magneti Marelli": {
+      "sito": "https://www.marelli.com",
+      "logo": "https://www.marelli.com/content/marelli/en/site/footer/master/_jcr_content/root/footer_v2_copy/logo.coreimg.svg",
+      "nota": "Logo SVG disponibile (Marelli è il nuovo nome)"
+    },
+    "Dana": {
+      "sito": "https://www.dana.com",
+      "logo": "https://www.dana.com/",
+      "nota": "Logo nel header"
+    }
+  },
+  "Industry 4.0": {
+    "Rockwell Automation": {
+      "sito": "https://www.rockwellautomation.com",
+      "logo": "https://www.rockwellautomation.com/en-us.html",
+      "nota": "Logo nel header"
+    },
+    "FANUC": {
+      "sito": "https://www.fanuc.com",
+      "logo": "https://www.fanuc.com/index.html",
+      "nota": "Logo nel header"
+    },
+    "Comau": {
+      "sito": "https://www.comau.com",
+      "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5LmRiYTNkYTNiNSwgMjAyMy8x...",
+      "nota": "Logo PNG base64 nel codice"
+    },
+    "Camozzi": {
+      "sito": "https://en.automation.camozzi.com",
+      "logo": "https://en.automation.camozzi.com/",
+      "nota": "Logo nel header e footer"
+    },
+    "Prima Industrie": {
+      "sito": "https://www.primaindustrie.com",
+      "logo": "https://www.primaindustrie.com/themes/custom/prima_industrie/logo-footer.svg",
+      "nota": "Logo SVG disponibile"
+    }
+  },
+  "NOTE_IMPORTANTI": {
+    "1": "Molti loghi non sono disponibili come URL pubblici diretti",
+    "2": "Si consiglia di contattare direttamente le aziende per media kit e kit di branding ufficiali",
+    "3": "Alcuni loghi sono nei header/footer dei siti ma non hanno URL diretti stabili",
+    "4": "I loghi SVG sono preferibili perché scalabili",
+    "5": "I loghi base64 sono incorporati nel codice HTML - richiedere le versioni originali",
+    "6": "Alcuni siti sono protetti - HTTP 403 - contattare aziende direttamente",
+    "7": "Per loghi di altissima qualità, visitare i media/press kit ufficiali delle aziende"
+  },
+  "RISORSE_CONSIGLIATE": {
+    "Media Kit": "Molte aziende hanno pagine dedicate ai media/press con download di loghi",
+    "Brand Guidelines": "Documenti ufficiali con specifiche dei loghi e loro utilizzo",
+    "Wikimedia Commons": "Fonte per loghi pubblici verificati",
+    "GitHub": "Alcuni loghi di aziende tech sono su repository pubblici",
+    "Contatto PR": "Email press/media per richiedere loghi ufficiali ad alta risoluzione"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Meccatronica": {
+    "Fastweb": "https://www.fastweb.it/adsl-fibra-ottica/gfx/dual/logo_black.svg",
+    "Magneti_Marelli": "https://www.marelli.com/content/marelli/en/site/footer/master/_jcr_content/root/footer_v2_copy/logo.coreimg.svg"
+  },
+  "ICT": {
+    "Fastweb": "https://www.fastweb.it/adsl-fibra-ottica/gfx/dual/logo_black.svg",
+    "Var_Group": "https://www.vargroup.com/-/media/Project/Var-Group-Tenant/Var-Group-Corporate-Website/Logos/LogoVarGroupWeb3x-4.png"
+  },
+  "Industry_4.0": {
+    "Prima_Industrie": "https://www.primaindustrie.com/themes/custom/prima_industrie/logo-footer.svg",
+    "Magneti_Marelli": "https://www.marelli.com/content/marelli/en/site/footer/master/_jcr_content/root/footer_v2_copy/logo.coreimg.svg"
+  },
+  "Automotive": {
+    "Magneti_Marelli": "https://www.marelli.com/content/marelli/en/site/footer/master/_jcr_content/root/footer_v2_copy/logo.coreimg.svg"
+  },
+  "NOTA": "Questi sono i link DIRETTI ai loghi trovati. La maggior parte dei loghi non è disponibile come URL pubblico stabile. Consultare il file 'company-logos.json' per informazioni complete su tutte le aziende."
+}

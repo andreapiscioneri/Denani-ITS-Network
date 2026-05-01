@@ -96,7 +96,7 @@ const videos: Video[] = [
 </template>
 
 <style scoped>
-.our-works { background: var(--white); padding-bottom: 120px; }
+.our-works { background: #07090f; padding-bottom: 120px; }
 
 .videos-grid {
   display: grid;
@@ -107,15 +107,20 @@ const videos: Video[] = [
 }
 
 .video-card {
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all 0.5s var(--ease);
 }
-.video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  border-color: rgba(0,102,255,0.3);
+  background: rgba(255,255,255,0.07);
+}
 
-.video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--navy-deep); }
+.video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #030609; }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 
 .ig-preview {
@@ -152,7 +157,7 @@ const videos: Video[] = [
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--navy-deep);
+  color: #fff;
   margin-bottom: 10px;
 }
 .video-link {
@@ -160,22 +165,35 @@ const videos: Video[] = [
   align-items: center; gap: 6px;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--navy-deep);
+  color: rgba(235,244,255,0.6);
   text-decoration: none;
   padding: 8px 14px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 100px;
   transition: all 0.3s var(--ease);
   letter-spacing: 0.02em;
 }
 .video-link:hover {
-  background: var(--navy-deep);
-  color: var(--white);
-  border-color: var(--navy-deep);
+  background: #0066ff;
+  color: #fff;
+  border-color: #0066ff;
   gap: 10px;
 }
 .video-link .arrow { font-size: 0.75rem; transition: transform 0.3s var(--ease); }
 .video-link:hover .arrow { transform: translate(2px, -2px); }
+
+/* section-head dark */
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.2em; font-weight: 700;
+  color: #4da8ff; margin-bottom: 18px;
+}
+.eyebrow::before { content: ''; width: 20px; height: 1px; background: #4da8ff; }
+.section-head h2 { color: #fff; margin-bottom: 18px; }
+.section-head .lead { color: rgba(235,244,255,0.6); line-height: 1.65; }
+.section-head .lead strong { color: #fff; }
 
 @media (max-width: 980px) {
   .videos-grid { grid-template-columns: 1fr; max-width: 560px; }

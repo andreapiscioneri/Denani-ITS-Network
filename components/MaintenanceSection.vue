@@ -329,7 +329,7 @@ const props = defineProps<{
     grid-template-columns: 1fr 1fr;
     gap: 8px 12px;
     padding: 16px;
-    background: var(--white);
+    background: transparent;
     border-radius: var(--radius-lg);
     border-bottom: none !important;
   }
