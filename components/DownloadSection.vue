@@ -79,6 +79,7 @@ const onDownload = (e: MouseEvent) => {
 .pre-footer-inner {
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 48px);
   display: flex;
   align-items: center;
   justify-content: space-between;

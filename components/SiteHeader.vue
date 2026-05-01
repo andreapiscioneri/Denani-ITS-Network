@@ -87,7 +87,7 @@ const anchors = [
         </span>
       </a>
 
-      <button class="hamburger" :class="{ active: mobileMenuOpen }" @click="toggleMobileMenu" aria-label="Toggle menu">
+      <button v-if="props.showAnchors" class="hamburger" :class="{ active: mobileMenuOpen }" @click="toggleMobileMenu" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
@@ -221,7 +221,7 @@ const anchors = [
 }
 .quality-seal:hover::before { transform: translateX(100%); }
 .quality-seal:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
-.seal-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 12px var(--orange); }
+.seal-dot { width: 8px; height: 8px; border-radius: 50%; background: #7dd3fc; box-shadow: 0 0 12px #7dd3fc; }
 .seal-text { display: flex; flex-direction: row; align-items: center; gap: 6px; line-height: 1.1; }
 .seal-text small { font-size: 0.625rem; opacity: 0.7; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
 
@@ -295,36 +295,17 @@ const anchors = [
   }
 }
 @media (max-width: 760px) {
-  .header-inner {
-    gap: 10px;
-  }
-  .quality-seal {
-    padding: 6px 9px;
-  }
-  .seal-text {
-    gap: 4px;
-  }
-  .hamburger {
-    margin: -6px;
-    padding: 6px;
-  }
-  .hamburger span {
-    width: 22px;
-  }
+  .header-inner { gap: 10px; }
+  .quality-seal { padding: 6px 9px; }
+  .seal-text { gap: 4px; }
+  .quality-seal .seal-text small { display: inline; font-size: 0.58rem; }
+  .hamburger { margin: -6px; padding: 6px; }
+  .hamburger span { width: 22px; }
 }
 @media (max-width: 540px) {
-  .brand-mark .logo-fondazione {
-    font-size: 0.92rem;
-  }
-  .quality-seal {
-    padding: 6px 7px;
-    gap: 7px;
-  }
-  .seal-dot {
-    width: 7px;
-    height: 7px;
-  }
+  .brand-mark .logo-fondazione { font-size: 0.875rem; }
+  .quality-seal { padding: 6px 10px; gap: 6px; }
+  .seal-dot { width: 7px; height: 7px; }
   .denani-logo { height: 14px; }
-  .quality-seal .seal-text small { display: none; }
 }
 </style>

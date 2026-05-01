@@ -64,6 +64,7 @@ import { sectorsList } from '~/data/sectors'
 .container {
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 48px);
 }
 
 .section-head {

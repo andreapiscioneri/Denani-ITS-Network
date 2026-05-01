@@ -43,14 +43,13 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-.ecosystem { background: var(--fog); }
+.ecosystem { background: var(--fog); padding: clamp(60px, 9vw, 132px) 0; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
 .bento {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: minmax(140px, auto);
   gap: 16px;
-  max-width: 1320px;
-  margin: 0 auto;
 }
 .bento-tile {
   position: relative;
@@ -71,7 +70,7 @@ const props = defineProps<{
 .bento-tile:hover .tile-bg { transform: scale(1.06); }
 .bento-tile .tile-content {
   position: relative; z-index: 2;
-  padding: 36px;
+  padding: clamp(20px, 3vw, 36px);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -109,18 +108,33 @@ const props = defineProps<{
 .tile-pos-2 { grid-column: span 6; min-height: 240px; }
 
 .ecosystem-note {
-  max-width: 1320px;
-  margin: 28px auto 0;
+  margin: 28px 0 0;
   font-size: 0.8125rem;
   color: var(--slate-light);
   letter-spacing: 0.02em;
   font-style: italic;
   text-align: center;
-  padding: 0 16px;
 }
 
+/* section-head scoped */
+.section-head { text-align: center; max-width: 720px; margin: 0 auto clamp(36px, 6vw, 56px); }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.2em; font-weight: 700;
+  color: var(--navy); margin-bottom: 18px;
+}
+.eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--navy); }
+
 @media (max-width: 980px) {
-  .bento { grid-template-columns: 1fr; }
-  .tile-pos-0, .tile-pos-1, .tile-pos-2 { grid-column: span 1; }
+  .bento { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .tile-pos-0, .tile-pos-1 { grid-column: span 1; }
+  .tile-pos-2 { grid-column: span 2; }
+}
+@media (max-width: 640px) {
+  .bento { grid-template-columns: 1fr; gap: 12px; }
+  .tile-pos-0, .tile-pos-1, .tile-pos-2 { grid-column: span 1; min-height: 220px; }
+  .tile-brand { font-size: 1.5rem; }
+  .tile-tagline { font-size: 0.875rem; }
 }
 </style>

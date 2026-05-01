@@ -99,7 +99,7 @@ const contactLinks = [
 
 <style scoped>
 .site-footer { background: var(--black); color: rgba(255,255,255,0.6); padding: clamp(56px, 8vw, 80px) 0 clamp(26px, 4vw, 40px); }
-.footer-inner { max-width: 1320px; margin: 0 auto; }
+.footer-inner { max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
@@ -149,13 +149,18 @@ const contactLinks = [
 .social-row svg { width: 16px; height: 16px; }
 
 @media (max-width: 980px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
-@media (max-width: 600px) {
-  .footer-grid { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-denani-logo { height: 48px; }
   .footer-bottom {
     padding-top: 24px;
-    gap: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
+  .social-row { gap: 10px; }
+  .social-row a { width: 38px; height: 38px; }
 }
 </style>

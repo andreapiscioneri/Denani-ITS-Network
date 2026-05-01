@@ -35,10 +35,10 @@ const logosLoop = computed(() => [...props.logos, ...props.logos])
   background: var(--white);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  padding: 48px 32px;
+  padding: clamp(32px, 5vw, 56px) 0;
   overflow: hidden;
 }
-.partners-inner { max-width: 1320px; margin: 0 auto; }
+.partners-inner { max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
 .partners-track {
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -81,9 +81,13 @@ const logosLoop = computed(() => [...props.logos, ...props.logos])
   100% { transform: translateX(-50%); }
 }
 
-@media (max-width: 600px) {
-  .logo-item { width: 120px; height: 48px; padding: 6px 12px; }
-  .partners-logos { gap: 24px; }
-  .logo-text { font-size: 1.25rem; }
+@media (max-width: 760px) {
+  .partners-logos { gap: 40px; animation-duration: 28s; }
+  .logo-item { width: 130px; height: 52px; }
+}
+@media (max-width: 480px) {
+  .logo-item { width: 110px; height: 44px; padding: 6px 10px; }
+  .partners-logos { gap: 24px; animation-duration: 22s; }
+  .logo-text { font-size: 1.1rem; }
 }
 </style>

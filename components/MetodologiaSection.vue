@@ -45,11 +45,12 @@ const steps = [
 </template>
 
 <style scoped>
-.metodologia { background: #07090f; }
+.metodologia { background: #07090f; padding: clamp(60px, 9vw, 132px) 0; }
+.container { padding: 0 clamp(20px, 5vw, 48px); }
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -57,7 +58,7 @@ const steps = [
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
-  padding: 40px 36px;
+  padding: clamp(24px, 3.5vw, 40px) clamp(20px, 3vw, 36px);
   position: relative;
   transition: all 0.5s var(--ease);
 }
@@ -105,7 +106,7 @@ const steps = [
 }
 
 /* section-head scoped per il dark context */
-.section-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto clamp(36px, 6vw, 64px); }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.72rem; text-transform: uppercase;
@@ -117,6 +118,11 @@ const steps = [
 .section-head .lead { color: rgba(235,244,255,0.6); line-height: 1.65; }
 
 @media (max-width: 980px) {
-  .steps { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .steps { grid-template-columns: 1fr; gap: 14px; }
+  .step-num { font-size: 2.5rem; margin-bottom: 16px; }
+  .step-title { font-size: 1.25rem; }
 }
 </style>

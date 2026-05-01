@@ -136,6 +136,7 @@ onMounted(() => {
 .home-hero-inner {
   position: relative; z-index: 2;
   max-width: 1320px; margin: 0 auto; width: 100%;
+  padding: 0 clamp(20px, 5vw, 48px);
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -212,7 +213,7 @@ onMounted(() => {
 }
 @media (max-width: 760px) {
   .home-hero-inner {
-    max-width: 460px;
+    max-width: 100%;
     margin-left: 0;
   }
   .home-hero-sub {
@@ -228,12 +229,14 @@ onMounted(() => {
   }
 }
 @media (max-width: 600px) {
-  .home-hero { padding-top: 116px; }
+  .home-hero { padding-top: 100px; }
   .home-stats { grid-template-columns: 1fr 1fr; }
-  .home-hero-inner { max-width: 420px; }
-  .home-hero h1 { max-width: 12ch; font-size: 2.25rem; line-height: 1.08; }
-  .home-hero-sub { font-size: 0.9375rem; }
-  .hero-eyebrow { flex-direction: column; gap: 8px; padding: 14px 18px; text-align: center; }
+  .home-hero-inner { max-width: 100%; }
+  .home-hero h1 { max-width: 100%; font-size: clamp(2rem, 9vw, 2.5rem); line-height: 1.08; }
+  .home-hero-sub { font-size: 0.9375rem; max-width: 100%; }
+  .hero-eyebrow { flex-direction: column; gap: 8px; padding: 12px 16px; text-align: center; font-size: 0.75rem; border-radius: 10px;}
+  .eyebrow-logos { display: none; }
+  .hero-cta-row { max-width: 100%; }
 }
 @media (max-width: 420px) {
   .home-stats {

@@ -96,7 +96,8 @@ const videos: Video[] = [
 </template>
 
 <style scoped>
-.our-works { background: #07090f; padding-bottom: 120px; }
+.our-works { background: #07090f; padding: clamp(60px, 9vw, 132px) 0 clamp(60px, 9vw, 120px); }
+.container { padding: 0 clamp(20px, 5vw, 48px); }
 
 .videos-grid {
   display: grid;
@@ -183,7 +184,7 @@ const videos: Video[] = [
 .video-link:hover .arrow { transform: translate(2px, -2px); }
 
 /* section-head dark */
-.section-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto clamp(32px, 6vw, 56px); }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.72rem; text-transform: uppercase;
@@ -196,9 +197,10 @@ const videos: Video[] = [
 .section-head .lead strong { color: #fff; }
 
 @media (max-width: 980px) {
-  .videos-grid { grid-template-columns: 1fr; max-width: 560px; }
+  .videos-grid { grid-template-columns: 1fr 1fr; max-width: 100%; }
 }
-@media (max-width: 600px) {
-  .videos-grid { gap: 16px; }
+@media (max-width: 640px) {
+  .videos-grid { grid-template-columns: 1fr; gap: 16px; max-width: 520px; margin: 0 auto; }
+  .video-info { padding: 16px 18px; }
 }
 </style>
