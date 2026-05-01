@@ -286,11 +286,16 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia d\'eccellenza industriale',
       sectionLead: 'La forza dei <strong>founding partner</strong> industriali al servizio della <strong>formazione tecnica</strong> d\'alto livello: meccatronica, automazione, energia e materiali avanzati.',
       logos: [
-        { name: 'Brembo', src: 'https://logo.clearbit.com/brembo.com' },
-        { name: 'Tenaris', src: 'https://logo.clearbit.com/tenaris.com' },
-        { name: 'Lovato Electric', src: 'https://logo.clearbit.com/lovato.it' },
-        { name: 'ABB Italia', src: 'https://logo.clearbit.com/abb.com' },
-        { name: 'Camozzi Group', src: 'https://logo.clearbit.com/camozzi.com' }
+        { name: 'Brembo', src: '/Loghi/Brembo.png' },
+        { name: 'Tenaris', src: '/Loghi/Tenaris.png' },
+        { name: 'Lovato Electric', src: '/Loghi/Lovato Electric.png' },
+        { name: 'ABB Italia', src: '/Loghi/ABB.png' },
+        { name: 'Camozzi Group', src: '/Loghi/Camozzi.png' },
+        { name: 'Bosch', src: '/Loghi/Bosch.png' },
+        { name: 'Schneider Electric', src: '/Loghi/Schneider_Electric_2007.svg.png' },
+        { name: 'Rockwell Automation', src: '/Loghi/Rockwell_Automation_logo_(2019).svg.png' },
+        { name: 'Magneti Marelli', src: '/Loghi/Magneti Marelli.png' },
+        { name: 'Prima Industrie', src: '/Loghi/Prima Industrie.png' },
       ],
       ecosystem: [
         {
@@ -400,11 +405,14 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia per il futuro sostenibile',
       sectionLead: 'I <strong>founding partner</strong> dell\'energia e dell\'impiantistica al servizio della <strong>formazione tecnica</strong> d\'alto livello: rinnovabili, efficienza, edilizia evoluta, smart building.',
       logos: [
-        { name: 'Enel', src: 'https://logo.clearbit.com/enel.com' },
-        { name: 'A2A', src: 'https://logo.clearbit.com/a2a.eu' },
-        { name: 'Edison', src: 'https://logo.clearbit.com/edison.it' },
-        { name: 'Riello', src: 'https://logo.clearbit.com/riello.com' },
-        { name: 'Saipem', src: 'https://logo.clearbit.com/saipem.com' }
+        { name: 'Enel Green Power', src: '/Loghi/enel green power.png' },
+        { name: 'A2A', src: '/Loghi/A2A.png' },
+        { name: 'Fastweb', src: '/Loghi/fastweb.png' },
+        { name: 'Gewiss', src: '/Loghi/Gewiss.png' },
+        { name: 'Schneider Electric', src: '/Loghi/Schneider_Electric_2007.svg.png' },
+        { name: 'ABB', src: '/Loghi/ABB.png' },
+        { name: 'Camozzi', src: '/Loghi/Camozzi.png' },
+        { name: 'Lovato Electric', src: '/Loghi/Lovato Electric.png' },
       ],
       ecosystem: [
         {
@@ -510,11 +518,13 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia tra system integrator d\'eccellenza',
       sectionLead: 'I <strong>founding partner</strong> dell\'ICT al servizio della <strong>formazione tecnica</strong> d\'alto livello: sviluppo software, cybersecurity, cloud, AI applicata e digital transformation per l\'industria.',
       logos: [
-        { name: 'Reply', src: 'https://logo.clearbit.com/reply.com' },
-        { name: 'Engineering', src: 'https://logo.clearbit.com/eng.it' },
-        { name: 'NTT Data', src: 'https://logo.clearbit.com/nttdata.com' },
-        { name: 'Vimar', src: 'https://logo.clearbit.com/vimar.com' },
-        { name: 'Italtel', src: 'https://logo.clearbit.com/italtel.com' }
+        { name: 'Engineering', src: '/Loghi/Engineering.png' },
+        { name: 'Fastweb', src: '/Loghi/fastweb.png' },
+        { name: 'Cisco', src: '/Loghi/cisco.png' },
+        { name: 'Huawei', src: '/Loghi/Huawei-Logo.png' },
+        { name: 'Var Group', src: '/Loghi/Var Group.png' },
+        { name: 'A2A', src: '/Loghi/A2A.png' },
+        { name: 'Leonardo', src: '/Loghi/Logo_Leonardo.svg.png' },
       ],
       ecosystem: [
         {
@@ -623,11 +633,12 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia con i grandi marchi del food italiano',
       sectionLead: 'I <strong>founding partner</strong> dell\'agroalimentare al servizio della <strong>formazione tecnica</strong> d\'alto livello: produzione industriale, food safety, supply chain, packaging sostenibile e tecnologie agroalimentari 4.0.',
       logos: [
-        { name: 'Barilla', src: 'https://logo.clearbit.com/barilla.com' },
-        { name: 'Lavazza', src: 'https://logo.clearbit.com/lavazza.it' },
-        { name: 'Granarolo', src: 'https://logo.clearbit.com/granarolo.com' },
-        { name: 'Galbani', src: 'https://logo.clearbit.com/galbani.it' },
-        { name: 'Sammontana', src: 'https://logo.clearbit.com/sammontana.com' }
+        { name: 'Barilla', src: '/Loghi/Barilla.webp' },
+        { name: 'Lavazza', src: '/Loghi/Lavazza_-_logo_(Italy,_1995).svg.png' },
+        { name: 'Granarolo', src: '/Loghi/Granarolo_corporate_POS2.svg.png' },
+        { name: 'Ferrero', src: '/Loghi/Ferrero.svg' },
+        { name: 'Nestlé Italia', src: '/Loghi/Nestlé Italia.png' },
+        { name: 'Inalca', src: '/Loghi/Inalca.png' },
       ],
       ecosystem: [
         {
@@ -735,11 +746,11 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia con le maison del lusso e della manifattura',
       sectionLead: 'I <strong>founding partner</strong> del Sistema Moda al servizio della <strong>formazione tecnica</strong> d\'alto livello: pelletteria, tessile, modelleria, calzaturificio e tecnologie applicate al lusso e al design industriale.',
       logos: [
-        { name: 'Tod\'s', src: 'https://logo.clearbit.com/tods.com' },
-        { name: 'Brunello Cucinelli', src: 'https://logo.clearbit.com/brunellocucinelli.com' },
-        { name: 'Loro Piana', src: 'https://logo.clearbit.com/loropiana.com' },
-        { name: 'Lonati', src: 'https://logo.clearbit.com/lonati.com' },
-        { name: 'Damiani', src: 'https://logo.clearbit.com/damiani.com' }
+        { name: 'Loro Piana', src: '/Loghi/Loro Piana.svg' },
+        { name: 'Versace', src: '/Loghi/Versace.png' },
+        { name: 'Corneliani', src: '/Loghi/Corneliani.png' },
+        { name: 'Marzotto', src: '/Loghi/Marzotto.png' },
+        { name: 'OTB Group', src: '/Loghi/OTB Group.svg' },
       ],
       ecosystem: [
         {
@@ -844,11 +855,13 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Le imprese che guidano la transizione elettrica',
       sectionLead: 'I <strong>partner industriali</strong> del settore automotive al servizio della <strong>formazione tecnica</strong> specializzata: OEM, tier 1, motorsport e mobility service.',
       logos: [
-        { name: 'Brembo', src: 'https://logo.clearbit.com/brembo.com' },
-        { name: 'Stellantis', src: 'https://logo.clearbit.com/stellantis.com' },
-        { name: 'Bosch', src: 'https://logo.clearbit.com/bosch.com' },
-        { name: 'Continental', src: 'https://logo.clearbit.com/continental.com' },
-        { name: 'Dana', src: 'https://logo.clearbit.com/dana.com' }
+        { name: 'Brembo', src: '/Loghi/Brembo.png' },
+        { name: 'Stellantis', src: '/Loghi/Stellantis.svg.png' },
+        { name: 'Bosch', src: '/Loghi/Bosch.png' },
+        { name: 'Continental', src: '/Loghi/Continental.png' },
+        { name: 'Dana', src: '/Loghi/Dana.png' },
+        { name: 'Magneti Marelli', src: '/Loghi/Magneti Marelli.png' },
+        { name: 'Avio Aero', src: '/Loghi/Avio Aero.png' },
       ],
       ecosystem: [
         {
@@ -924,11 +937,13 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Le imprese che costruiscono la fabbrica intelligente',
       sectionLead: 'I <strong>partner industriali</strong> per la <strong>formazione tecnica avanzata</strong> su AI industriale, digital twin e smart factory.',
       logos: [
-        { name: 'Siemens', src: 'https://logo.clearbit.com/siemens.com' },
-        { name: 'Rockwell', src: 'https://logo.clearbit.com/rockwellautomation.com' },
-        { name: 'Fanuc', src: 'https://logo.clearbit.com/fanuc.co.jp' },
-        { name: 'Comau', src: 'https://logo.clearbit.com/comau.com' },
-        { name: 'Camozzi', src: 'https://logo.clearbit.com/camozzi.com' }
+        { name: 'Rockwell Automation', src: '/Loghi/Rockwell_Automation_logo_(2019).svg.png' },
+        { name: 'Fanuc', src: '/Loghi/fanuc.png' },
+        { name: 'Comau', src: '/Loghi/Comau.svg' },
+        { name: 'Camozzi', src: '/Loghi/Camozzi.png' },
+        { name: 'Cosberg', src: '/Loghi/Cosberg.png' },
+        { name: 'Prima Industrie', src: '/Loghi/Prima Industrie.png' },
+        { name: 'Leonardo', src: '/Loghi/Logo_Leonardo.svg.png' },
       ],
       ecosystem: [
         {

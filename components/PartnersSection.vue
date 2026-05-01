@@ -55,14 +55,16 @@ const logosLoop = computed(() => [...props.logos, ...props.logos])
 .logo-item {
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  height: 52px;
-  padding: 0 8px;
-  opacity: 0.7;
+  width: 160px;
+  height: 64px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  opacity: 0.75;
   transition: opacity 0.3s ease;
 }
-.logo-item--dark { background: var(--black); border-radius: 8px; padding: 10px 18px; height: 52px; box-sizing: border-box; }
+.logo-item--dark { background: var(--black); border-radius: 8px; }
 .logo-item:hover { opacity: 1; }
-.logo-item img { height: 100%; width: auto; max-width: 180px; object-fit: contain; display: block; }
+.logo-item img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .logo-item--text { padding: 0 20px; }
 .logo-text {
@@ -80,8 +82,8 @@ const logosLoop = computed(() => [...props.logos, ...props.logos])
 }
 
 @media (max-width: 600px) {
-  .logo-item { height: 40px; }
-  .partners-logos { gap: 48px; }
+  .logo-item { width: 120px; height: 48px; padding: 6px 12px; }
+  .partners-logos { gap: 24px; }
   .logo-text { font-size: 1.25rem; }
 }
 </style>

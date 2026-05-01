@@ -288,53 +288,52 @@ const themes: Record<string, ThemeConfig> = {
 }
 
 const getCompanyLogo = (name: string): string | null => {
-  const logoMap: Record<string, string | null> = {
+  const logoMap: Record<string, string> = {
     // Meccatronica
-    'Tenaris': null,
-    'Brembo': null,
-    'Avio Aero': null,
-    'Lovato Electric': null,
-    'Cosberg': null,
-    'Gewiss': null,
+    'Tenaris': '/Loghi/Tenaris.png',
+    'Brembo': '/Loghi/Brembo.png',
+    'Avio Aero': '/Loghi/Avio Aero.png',
+    'Lovato Electric': '/Loghi/Lovato Electric.png',
+    'Cosberg': '/Loghi/Cosberg.png',
+    'Gewiss': '/Loghi/Gewiss.png',
     // Energia
-    'A2A': null,
-    'Enel Green Power': null,
-    'ABB': null,
-    'Schneider Electric': null,
-    'Siemens': null,
+    'A2A': '/Loghi/A2A.png',
+    'Enel Green Power': '/Loghi/enel green power.png',
+    'ABB': '/Loghi/ABB.png',
+    'Schneider Electric': '/Loghi/Schneider_Electric_2007.svg.png',
     // ICT
-    'Leonardo': null,
-    'Cisco': null,
-    'Huawei': null,
-    'Fastweb': 'https://www.fastweb.it/adsl-fibra-ottica/gfx/dual/logo_black.svg',
-    'Engineering': null,
-    'Var Group': 'https://www.vargroup.com/-/media/Project/Var-Group-Tenant/Var-Group-Corporate-Website/Logos/LogoVarGroupWeb3x-4.png',
+    'Leonardo': '/Loghi/Logo_Leonardo.svg.png',
+    'Cisco': '/Loghi/cisco.png',
+    'Huawei': '/Loghi/Huawei-Logo.png',
+    'Fastweb': '/Loghi/fastweb.png',
+    'Engineering': '/Loghi/Engineering.png',
+    'Var Group': '/Loghi/Var Group.png',
     // Agroalimentare
-    'Barilla': null,
-    'Granarolo': null,
-    'Lavazza': null,
-    'Ferrero': null,
-    'Nestlé Italia': null,
-    'Inalca': null,
+    'Barilla': '/Loghi/Barilla.webp',
+    'Granarolo': '/Loghi/Granarolo_corporate_POS2.svg.png',
+    'Lavazza': '/Loghi/Lavazza_-_logo_(Italy,_1995).svg.png',
+    'Ferrero': '/Loghi/Ferrero.svg',
+    'Nestlé Italia': '/Loghi/Nestlé Italia.png',
+    'Inalca': '/Loghi/Inalca.png',
     // Moda
-    'Versace': null,
-    'OTB Group': null,
-    'Corneliani': null,
-    'Brembana & Rolle': null,
-    'Marzotto': null,
-    'Loro Piana': null,
+    'Versace': '/Loghi/Versace.png',
+    'OTB Group': '/Loghi/OTB Group.svg',
+    'Corneliani': '/Loghi/Corneliani.png',
+    'Brembana & Rolle': '/Loghi/Brembana & Rolle.png',
+    'Marzotto': '/Loghi/Marzotto.png',
+    'Loro Piana': '/Loghi/Loro Piana.svg',
     // Automotive
-    'Stellantis': null,
-    'Bosch': null,
-    'Continental': null,
-    'Magneti Marelli': 'https://www.marelli.com/content/marelli/en/site/footer/master/_jcr_content/root/footer_v2_copy/logo.coreimg.svg',
-    'Dana': null,
+    'Stellantis': '/Loghi/Stellantis.svg.png',
+    'Bosch': '/Loghi/Bosch.png',
+    'Continental': '/Loghi/Continental.png',
+    'Magneti Marelli': '/Loghi/Magneti Marelli.png',
+    'Dana': '/Loghi/Dana.png',
     // Industry 4.0
-    'Rockwell': null,
-    'Fanuc': null,
-    'Comau': null,
-    'Camozzi': null,
-    'Prima Industrie': 'https://www.primaindustrie.com/themes/custom/prima_industrie/logo-footer.svg'
+    'Rockwell': '/Loghi/Rockwell_Automation_logo_(2019).svg.png',
+    'Fanuc': '/Loghi/fanuc.png',
+    'Comau': '/Loghi/Comau.svg',
+    'Camozzi': '/Loghi/Camozzi.png',
+    'Prima Industrie': '/Loghi/Prima Industrie.png',
   }
   return logoMap[name] ?? null
 }
@@ -1259,17 +1258,20 @@ section { padding: clamp(60px, 9vw, 110px) 0; position: relative; }
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 20px 24px;
+  box-sizing: border-box;
 }
 .company-logo {
-  max-width: 90%;
-  max-height: 70%;
+  width: 100%;
+  height: 100%;
+  max-width: 160px;
+  max-height: 60px;
   object-fit: contain;
-  filter: brightness(0.9) contrast(1.05);
+  filter: brightness(0) invert(1) opacity(0.85);
   transition: filter 0.3s ease;
 }
 .logo-chip:hover .company-logo {
-  filter: brightness(1) contrast(1.1);
+  filter: brightness(0) invert(1) opacity(1);
 }
 .company-text {
   color: rgba(255,255,255,0.88);
