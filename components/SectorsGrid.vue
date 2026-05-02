@@ -37,8 +37,11 @@ import { sectorsList } from '~/data/sectors'
                 {{ s.hero.titleTrail }}
               </p>
             </div>
-            <div class="s-cta">
-              Scopri il percorso <span class="s-arrow">→</span>
+            <div class="s-bottom">
+              <div class="s-cta">
+                Scopri il percorso <span class="s-arrow">→</span>
+              </div>
+              <div class="s-url">denani-its-network.netlify.app/settori/{{ s.slug }}</div>
             </div>
           </div>
         </NuxtLink>
@@ -228,6 +231,23 @@ import { sectorsList } from '~/data/sectors'
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .s-card:hover .s-arrow { transform: translateX(6px); }
+
+.s-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.s-url {
+  font-size: 0.72rem;
+  color: rgba(235,244,255,0.28);
+  font-family: 'Space Mono', 'Courier New', monospace;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+}
+.s-card:hover .s-url {
+  color: rgba(235,244,255,0.5);
+}
 
 /* ── Responsive ────── */
 @media (max-width: 1100px) {

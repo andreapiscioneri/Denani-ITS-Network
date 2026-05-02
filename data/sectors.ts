@@ -15,14 +15,16 @@ export interface PartnerLogo {
   src?: string         // path /public; se assente usa "name" come testo
   name: string
   dark?: boolean       // tile scura (per loghi bianchi)
+  invert?: boolean     // logo bianco senza chip di sfondo
 }
 
 export interface EcosystemPartner {
   name: string
   role: string
   tagline: string
-  /** background gradient inline (CSS) — usato come fallback estetico se non c'è img */
   gradient: string
+  logo?: string
+  invertLogo?: boolean
 }
 
 export interface PricingPlan {
@@ -290,7 +292,7 @@ export const sectors: Record<string, Sector> = {
         { name: 'Tenaris', src: '/Loghi/Tenaris.png' },
         { name: 'Lovato Electric', src: '/Loghi/Lovato Electric.png' },
         { name: 'ABB Italia', src: '/Loghi/ABB.png' },
-        { name: 'Camozzi Group', src: '/Loghi/Camozzi.png' },
+        { name: 'Camozzi Group', src: '/Loghi/Camozzi.png', dark: true },
         { name: 'Bosch', src: '/Loghi/Bosch.png' },
         { name: 'Schneider Electric', src: '/Loghi/Schneider_Electric_2007.svg.png' },
         { name: 'Rockwell Automation', src: '/Loghi/Rockwell_Automation_logo_(2019).svg.png' },
@@ -302,19 +304,22 @@ export const sectors: Record<string, Sector> = {
           name: 'Brembo',
           role: 'Founding Partner · Sistemi frenanti',
           tagline: 'High-performance braking systems: ricerca, materiali compositi e tecnologie per la mobilità del futuro.',
-          gradient: 'linear-gradient(135deg, #1a2332 0%, #0a0e1a 100%)'
+          gradient: 'linear-gradient(135deg, #1a2332 0%, #0a0e1a 100%)',
+          logo: '/Loghi/Brembo.png'
         },
         {
           name: 'Tenaris',
           role: 'Founding Partner · Acciaio',
           tagline: 'Architettura industriale dell\'acciaio: tubi senza saldatura per energia, automotive e infrastrutture critiche.',
-          gradient: 'linear-gradient(135deg, #1c3a5e 0%, #0a1828 100%)'
+          gradient: 'linear-gradient(135deg, #1c3a5e 0%, #0a1828 100%)',
+          logo: '/Loghi/Tenaris.png'
         },
         {
           name: 'Lovato Electric',
           role: 'Founding Partner · Automazione',
           tagline: 'Smart electrical panels e soluzioni di automazione per gli impianti industriali Industry 4.0.',
-          gradient: 'linear-gradient(135deg, #2a3441 0%, #1a1f2a 100%)'
+          gradient: 'linear-gradient(135deg, #2a3441 0%, #1a1f2a 100%)',
+          logo: '/Loghi/Lovato Electric.png'
         }
       ]
     },
@@ -411,7 +416,7 @@ export const sectors: Record<string, Sector> = {
         { name: 'Gewiss', src: '/Loghi/Gewiss.png' },
         { name: 'Schneider Electric', src: '/Loghi/Schneider_Electric_2007.svg.png' },
         { name: 'ABB', src: '/Loghi/ABB.png' },
-        { name: 'Camozzi', src: '/Loghi/Camozzi.png' },
+        { name: 'Camozzi', src: '/Loghi/Camozzi.png', dark: true },
         { name: 'Lovato Electric', src: '/Loghi/Lovato Electric.png' },
       ],
       ecosystem: [
@@ -419,19 +424,23 @@ export const sectors: Record<string, Sector> = {
           name: 'Enel X',
           role: 'Founding Partner · Energie rinnovabili',
           tagline: 'Soluzioni di elettrificazione, mobilità elettrica, fotovoltaico e accumulo per industria e infrastrutture pubbliche.',
-          gradient: 'linear-gradient(135deg, #003d2e 0%, #001a14 100%)'
+          gradient: 'linear-gradient(135deg, #003d2e 0%, #001a14 100%)',
+          logo: '/Loghi/enel green power.png'
         },
         {
           name: 'A2A',
           role: 'Founding Partner · Multi-utility',
           tagline: 'Generazione, distribuzione, teleriscaldamento ed economia circolare: la transizione energetica del territorio lombardo.',
-          gradient: 'linear-gradient(135deg, #0a3a2a 0%, #051c14 100%)'
+          gradient: 'linear-gradient(135deg, #0a3a2a 0%, #051c14 100%)',
+          logo: '/Loghi/A2A.png'
         },
         {
           name: 'Riello',
           role: 'Founding Partner · Impiantistica termica',
           tagline: 'Pompe di calore, caldaie a condensazione e sistemi ibridi per l\'efficientamento di edifici residenziali e industriali.',
-          gradient: 'linear-gradient(135deg, #1a3328 0%, #0a1814 100%)'
+          gradient: 'linear-gradient(135deg, #1a3328 0%, #0a1814 100%)',
+          logo: '/Loghi/riello.svg',
+          invertLogo: true
         }
       ]
     },
@@ -521,8 +530,8 @@ export const sectors: Record<string, Sector> = {
         { name: 'Engineering', src: '/Loghi/Engineering.png' },
         { name: 'Fastweb', src: '/Loghi/fastweb.png' },
         { name: 'Cisco', src: '/Loghi/cisco.png' },
-        { name: 'Huawei', src: '/Loghi/Huawei-Logo.png' },
-        { name: 'Var Group', src: '/Loghi/Var Group.png' },
+        { name: 'Huawei', src: '/Loghi/Huawei-Logo.png', invert: true },
+        { name: 'Var Group', src: '/Loghi/Var Group.png', invert: true },
         { name: 'A2A', src: '/Loghi/A2A.png' },
         { name: 'Leonardo', src: '/Loghi/Logo_Leonardo.svg.png' },
       ],
@@ -531,19 +540,23 @@ export const sectors: Record<string, Sector> = {
           name: 'Reply',
           role: 'Founding Partner · System Integration',
           tagline: 'Consulenza, system integration, applicazioni e processi digitali end-to-end per la trasformazione delle imprese italiane.',
-          gradient: 'linear-gradient(135deg, #1a1438 0%, #0a0820 100%)'
+          gradient: 'linear-gradient(135deg, #1a1438 0%, #0a0820 100%)',
+          logo: '/Loghi/Logo_Reply.svg'
         },
         {
           name: 'Engineering',
           role: 'Founding Partner · Digital Transformation',
           tagline: 'Software, servizi e infrastruttura digitale per pubblica amministrazione, sanità, energia, manifattura e servizi finanziari.',
-          gradient: 'linear-gradient(135deg, #2a1f4a 0%, #150f25 100%)'
+          gradient: 'linear-gradient(135deg, #2a1f4a 0%, #150f25 100%)',
+          logo: '/Loghi/Engineering.png',
+          invertLogo: true
         },
         {
           name: 'NTT Data',
           role: 'Founding Partner · Cloud & AI',
           tagline: 'Soluzioni cloud, intelligenza artificiale generativa e cybersecurity per le grandi imprese e le PMI strutturate.',
-          gradient: 'linear-gradient(135deg, #1c1638 0%, #0e0b1c 100%)'
+          gradient: 'linear-gradient(135deg, #1c1638 0%, #0e0b1c 100%)',
+          logo: '/Loghi/Logo_Global_NTT_DATA_Future_Blue_RGB.png'
         }
       ]
     },
@@ -634,10 +647,10 @@ export const sectors: Record<string, Sector> = {
       sectionLead: 'I <strong>founding partner</strong> dell\'agroalimentare al servizio della <strong>formazione tecnica</strong> d\'alto livello: produzione industriale, food safety, supply chain, packaging sostenibile e tecnologie agroalimentari 4.0.',
       logos: [
         { name: 'Barilla', src: '/Loghi/Barilla.webp' },
-        { name: 'Lavazza', src: '/Loghi/Lavazza_-_logo_(Italy,_1995).svg.png' },
+        { name: 'Lavazza', src: '/Loghi/Lavazza_-_logo_(Italy,_1995).svg.png', invert: true },
         { name: 'Granarolo', src: '/Loghi/Granarolo_corporate_POS2.svg.png' },
-        { name: 'Ferrero', src: '/Loghi/Ferrero.svg' },
-        { name: 'Nestlé Italia', src: '/Loghi/Nestlé Italia.png' },
+        { name: 'Ferrero', src: '/Loghi/Ferrero.svg', invert: true },
+        { name: 'Nestlé Italia', src: '/Loghi/Nestlé Italia.png', invert: true },
         { name: 'Inalca', src: '/Loghi/Inalca.png' },
       ],
       ecosystem: [
@@ -645,19 +658,23 @@ export const sectors: Record<string, Sector> = {
           name: 'Barilla',
           role: 'Founding Partner · Pasta & Bakery',
           tagline: 'Eccellenza industriale italiana nella pasta e nei prodotti da forno: ricerca, qualità e sostenibilità della filiera grano.',
-          gradient: 'linear-gradient(135deg, #1f3514 0%, #0e1a08 100%)'
+          gradient: 'linear-gradient(135deg, #1f3514 0%, #0e1a08 100%)',
+          logo: '/Loghi/Barilla.webp'
         },
         {
           name: 'Granarolo',
           role: 'Founding Partner · Lattiero-caseario',
           tagline: 'Filiera latte 100% italiana: produzione, trasformazione e distribuzione di latte fresco e formaggi DOP.',
-          gradient: 'linear-gradient(135deg, #2a3818 0%, #15200d 100%)'
+          gradient: 'linear-gradient(135deg, #2a3818 0%, #15200d 100%)',
+          logo: '/Loghi/Granarolo_corporate_POS2.svg.png'
         },
         {
           name: 'Lavazza',
           role: 'Founding Partner · Coffee Industry',
           tagline: 'L\'arte italiana del caffè a livello globale: tostatura, sostenibilità della filiera e innovazione di prodotto.',
-          gradient: 'linear-gradient(135deg, #1a2810 0%, #0a1408 100%)'
+          gradient: 'linear-gradient(135deg, #1a2810 0%, #0a1408 100%)',
+          logo: '/Loghi/Lavazza_-_logo_(Italy,_1995).svg.png',
+          invertLogo: true
         }
       ]
     },
@@ -746,30 +763,34 @@ export const sectors: Record<string, Sector> = {
       sectionTitle: 'Una sinergia con le maison del lusso e della manifattura',
       sectionLead: 'I <strong>founding partner</strong> del Sistema Moda al servizio della <strong>formazione tecnica</strong> d\'alto livello: pelletteria, tessile, modelleria, calzaturificio e tecnologie applicate al lusso e al design industriale.',
       logos: [
-        { name: 'Loro Piana', src: '/Loghi/Loro Piana.svg' },
-        { name: 'Versace', src: '/Loghi/Versace.png' },
-        { name: 'Corneliani', src: '/Loghi/Corneliani.png' },
-        { name: 'Marzotto', src: '/Loghi/Marzotto.png' },
-        { name: 'OTB Group', src: '/Loghi/OTB Group.svg' },
+        { name: 'Loro Piana', src: '/Loghi/Loro Piana.svg', invert: true },
+        { name: 'Versace', src: '/Loghi/Versace.png', invert: true },
+        { name: 'Corneliani', src: '/Loghi/Corneliani.png', invert: true },
+        { name: 'Marzotto', src: '/Loghi/Marzotto.png', invert: true },
+        { name: 'OTB Group', src: '/Loghi/OTB Group.svg', invert: true },
       ],
       ecosystem: [
         {
           name: 'Brunello Cucinelli',
           role: 'Founding Partner · Lusso umanistico',
           tagline: 'Cashmere, sartorialità e capitalismo umanistico: la qualità totale del Made in Italy nel segmento del lusso assoluto.',
-          gradient: 'linear-gradient(135deg, #2e2515 0%, #18120a 100%)'
+          gradient: 'linear-gradient(135deg, #2e2515 0%, #18120a 100%)',
+          logo: '/Loghi/Brunello-Cucinelli-logo.png',
+          invertLogo: true
         },
         {
           name: 'Tod\'s',
           role: 'Founding Partner · Pelletteria',
           tagline: 'Eccellenza italiana nella pelletteria e nella calzatura: tradizione manifatturiera e innovazione di prodotto.',
-          gradient: 'linear-gradient(135deg, #2a2010 0%, #150f08 100%)'
+          gradient: 'linear-gradient(135deg, #2a2010 0%, #150f08 100%)',
+          logo: '/Loghi/Tod\'s.png'
         },
         {
           name: 'Lonati',
           role: 'Founding Partner · Macchine tessili',
           tagline: 'Leader globale nelle macchine per calzetteria e tessile a maglia: ingegneria meccanica al servizio della moda.',
-          gradient: 'linear-gradient(135deg, #2c2818 0%, #16140c 100%)'
+          gradient: 'linear-gradient(135deg, #2c2818 0%, #16140c 100%)',
+          logo: '/Loghi/lon_logo.webp'
         }
       ]
     },
@@ -856,31 +877,35 @@ export const sectors: Record<string, Sector> = {
       sectionLead: 'I <strong>partner industriali</strong> del settore automotive al servizio della <strong>formazione tecnica</strong> specializzata: OEM, tier 1, motorsport e mobility service.',
       logos: [
         { name: 'Brembo', src: '/Loghi/Brembo.png' },
-        { name: 'Stellantis', src: '/Loghi/Stellantis.svg.png' },
+        { name: 'Stellantis', src: '/Loghi/Stellantis.svg.png', invert: true },
         { name: 'Bosch', src: '/Loghi/Bosch.png' },
-        { name: 'Continental', src: '/Loghi/Continental.png' },
+        { name: 'Continental', src: '/Loghi/Continental.png', invert: true },
         { name: 'Dana', src: '/Loghi/Dana.png' },
-        { name: 'Magneti Marelli', src: '/Loghi/Magneti Marelli.png' },
-        { name: 'Avio Aero', src: '/Loghi/Avio Aero.png' },
+        { name: 'Magneti Marelli', src: '/Loghi/Magneti Marelli.png', invert: true },
+        { name: 'Avio Aero', src: '/Loghi/Avio Aero.png', invert: true },
       ],
       ecosystem: [
         {
           name: 'Brembo',
           role: 'Founding Partner · Frenatura & Performance',
           tagline: 'Leader mondiale nei sistemi frenanti ad alte prestazioni: tecnologia, innovazione e presenza in Formula 1.',
-          gradient: 'linear-gradient(135deg, #2a0606 0%, #150303 100%)'
+          gradient: 'linear-gradient(135deg, #2a0606 0%, #150303 100%)',
+          logo: '/Loghi/Brembo.png'
         },
         {
           name: 'Bosch',
           role: 'Founding Partner · Sistemi Automotive',
           tagline: 'Tecnologia di punta per ADAS, powertrain elettrico e sistemi di controllo: il partner tech di ogni grande OEM.',
-          gradient: 'linear-gradient(135deg, #1a0808 0%, #0d0404 100%)'
+          gradient: 'linear-gradient(135deg, #1a0808 0%, #0d0404 100%)',
+          logo: '/Loghi/Bosch.png'
         },
         {
           name: 'Continental',
           role: 'Founding Partner · EV & Pneumatici',
           tagline: 'Sistemi elettronici, pneumatici intelligenti e soluzioni per la mobilità connessa del futuro.',
-          gradient: 'linear-gradient(135deg, #200a0a 0%, #100505 100%)'
+          gradient: 'linear-gradient(135deg, #200a0a 0%, #100505 100%)',
+          logo: '/Loghi/Continental.png',
+          invertLogo: true
         }
       ]
     },
@@ -940,7 +965,7 @@ export const sectors: Record<string, Sector> = {
         { name: 'Rockwell Automation', src: '/Loghi/Rockwell_Automation_logo_(2019).svg.png' },
         { name: 'Fanuc', src: '/Loghi/fanuc.png' },
         { name: 'Comau', src: '/Loghi/Comau.svg' },
-        { name: 'Camozzi', src: '/Loghi/Camozzi.png' },
+        { name: 'Camozzi', src: '/Loghi/Camozzi.png', dark: true },
         { name: 'Cosberg', src: '/Loghi/Cosberg.png' },
         { name: 'Prima Industrie', src: '/Loghi/Prima Industrie.png' },
         { name: 'Leonardo', src: '/Loghi/Logo_Leonardo.svg.png' },
@@ -956,13 +981,16 @@ export const sectors: Record<string, Sector> = {
           name: 'Fanuc',
           role: 'Founding Partner · AI Robotica',
           tagline: 'Robot industriali con AI integrata per manifattura flessibile, cobot e visione artificiale.',
-          gradient: 'linear-gradient(135deg, #031218 0%, #020a10 100%)'
+          gradient: 'linear-gradient(135deg, #031218 0%, #020a10 100%)',
+          logo: '/Loghi/fanuc.png'
         },
         {
           name: 'Comau',
           role: 'Founding Partner · Smart Manufacturing',
           tagline: 'Soluzioni di automazione avanzata e digital manufacturing per la produzione di nuova generazione.',
-          gradient: 'linear-gradient(135deg, #041420 0%, #020c16 100%)'
+          gradient: 'linear-gradient(135deg, #041420 0%, #020c16 100%)',
+          logo: '/Loghi/Comau.svg',
+          invertLogo: true
         }
       ]
     },

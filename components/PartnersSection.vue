@@ -18,7 +18,7 @@ const logosLoop = computed(() => [...props.logos, ...props.logos])
             v-for="(item, idx) in logosLoop"
             :key="idx"
             class="logo-item"
-            :class="{ 'logo-item--dark': item.dark, 'logo-item--text': !item.src }"
+            :class="{ 'logo-item--dark': item.dark, 'logo-item--invert': item.invert, 'logo-item--text': !item.src }"
             :aria-hidden="idx >= props.logos.length"
           >
             <img v-if="item.src" :src="item.src" :alt="idx < props.logos.length ? item.name : ''" />
@@ -63,6 +63,7 @@ const logosLoop = computed(() => [...props.logos, ...props.logos])
   transition: opacity 0.3s ease;
 }
 .logo-item--dark { background: var(--black); border-radius: 8px; }
+.logo-item--invert img { filter: brightness(0) invert(1); }
 .logo-item:hover { opacity: 1; }
 .logo-item img { width: 100%; height: 100%; object-fit: contain; display: block; }
 

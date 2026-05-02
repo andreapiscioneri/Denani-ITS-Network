@@ -27,7 +27,14 @@ const props = defineProps<{
           <div class="tile-content">
             <div class="tile-meta"><span class="dot"></span>{{ p.role }}</div>
             <div>
-              <div class="tile-brand">{{ p.name }}</div>
+              <img
+                v-if="p.logo"
+                :src="p.logo"
+                :alt="p.name"
+                class="tile-logo"
+                :class="{ 'tile-logo--invert': p.invertLogo }"
+              />
+              <div v-else class="tile-brand">{{ p.name }}</div>
               <div class="tile-tagline">{{ p.tagline }}</div>
             </div>
           </div>
@@ -56,7 +63,7 @@ const props = defineProps<{
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--white);
-  border: 1px solid var(--line);
+  border: 0.1px solid rgb(125, 125, 125);
   transition: all 0.5s var(--ease);
   will-change: transform;
   min-height: 280px;
@@ -81,6 +88,19 @@ const props = defineProps<{
   background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
 }
 
+.tile-logo {
+  height: clamp(32px, 4vw, 48px);
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  display: block;
+  mix-blend-mode: screen;
+  filter: brightness(1.2);
+}
+.tile-logo--invert {
+  filter: brightness(0) invert(1);
+}
 .tile-brand {
   color: var(--white);
   font-family: 'Space Grotesk', sans-serif;

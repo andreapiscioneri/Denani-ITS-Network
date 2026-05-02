@@ -338,6 +338,15 @@ const getCompanyLogo = (name: string): string | null => {
   return logoMap[name] ?? null
 }
 
+// Loghi con colori scuri su sfondo trasparente — invisibili su card dark senza boost
+const darkLogoNames = new Set([
+  'Avio Aero', 'Engineering', 'Corneliani',
+  'Marzotto', 'Loro Piana', 'Continental', 'Prima Industrie',
+  'Camozzi', 'Comau', 'Lavazza', 'Nestlé Italia', 'Ferrero',
+  'Versace', 'OTB Group', 'Var Group',
+  'Stellantis', 'Magneti Marelli',
+])
+
 const theme = computed(() => themes[slug.value] ?? themes['meccatronica-automotive'])
 
 const openDayDate = computed(() => {
@@ -520,7 +529,7 @@ watch(slug, () => {
           <div class="logos-grid reveal-stagger" data-reveal-stagger>
             <article v-for="name in theme.companies" :key="name" class="logo-chip">
               <div class="chip-inner">
-                <img v-if="getCompanyLogo(name)" :src="getCompanyLogo(name)!" :alt="name" class="company-logo" />
+                <img v-if="getCompanyLogo(name)" :src="getCompanyLogo(name)!" :alt="name" :class="['company-logo', darkLogoNames.has(name) ? 'logo-boost' : '']" />
                 <span v-else class="company-text">{{ name }}</span>
               </div>
             </article>
@@ -722,8 +731,11 @@ watch(slug, () => {
 :deep(.partners-section h2) { color: #fff !important; }
 :deep(.partners-section .eyebrow) { color: var(--sector-accent) !important; }
 :deep(.logo-text) { color: rgba(235,244,255,0.65) !important; }
-:deep(.logo-item) { opacity: 0.7; filter: brightness(2) !important; }
+:deep(.logo-item) { opacity: 0.75; mix-blend-mode: screen; filter: brightness(1.4) !important; }
+:deep(.logo-item--dark) { mix-blend-mode: normal !important; filter: none !important; opacity: 0.9 !important; }
+:deep(.logo-item--dark img) { filter: brightness(0) invert(1) !important; opacity: 0.85; }
 :deep(.logo-item:hover) { opacity: 1 !important; }
+:deep(.logo-item--dark:hover img) { opacity: 1 !important; }
 
 /* EcosystemSection — already dark, just accent + subtitle override */
 :deep(.ecosystem) { background: #07090f !important; }
@@ -1230,26 +1242,36 @@ section { padding: clamp(60px, 9vw, 110px) 0; position: relative; }
 .logos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 24px;
 }
 
 .logo-chip {
-  min-height: clamp(84px, 12vw, 100px);
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.96);
+  min-height: clamp(90px, 12vw, 110px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #0d1525;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.35s ease;
   cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.logo-chip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%, var(--sector-accent-soft, rgba(0,102,255,0.06)), transparent 65%);
+  pointer-events: none;
 }
 .logo-chip:hover {
   border-color: var(--sector-accent);
-  background: #fff;
+  background: #111e34;
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 0 1px var(--sector-accent);
 }
 
 .chip-inner {
@@ -1260,27 +1282,42 @@ section { padding: clamp(60px, 9vw, 110px) 0; position: relative; }
   height: 100%;
   padding: 20px 24px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 .company-logo {
   width: 100%;
   height: 100%;
-  max-width: 160px;
-  max-height: 60px;
+  max-width: 150px;
+  max-height: 56px;
   object-fit: contain;
+  mix-blend-mode: screen;
+  filter: brightness(1.15) saturate(0.85);
   opacity: 0.9;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+.company-logo.logo-boost {
+  filter: brightness(0) invert(1);
+  opacity: 0.82;
 }
 .logo-chip:hover .company-logo {
   opacity: 1;
+  filter: brightness(1.3) saturate(1);
+}
+.logo-chip:hover .company-logo.logo-boost {
+  filter: brightness(0) invert(1);
+  opacity: 1;
 }
 .company-text {
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.75);
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 0.95rem;
   text-align: center;
   line-height: 1.3;
 }
+.logo-chip:hover .company-text { color: #fff; }
 
 .companies-note {
   text-align: center;
