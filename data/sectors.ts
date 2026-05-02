@@ -631,6 +631,7 @@ export const sectors: Record<string, Sector> = {
     accent: '#5A9F3A',
     accentGlow: '#7BC456',
     accentSoft: 'rgba(90, 159, 58, 0.12)',
+    accentOnDark: '#000000',
 
     hero: {
       eyebrow: 'Filiera Agroalimentare · Food Tech · Sostenibilità Alimentare',
