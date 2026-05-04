@@ -743,6 +743,10 @@ watch(slug, () => {
 :deep(.ecosystem h2) { color: #fff !important; }
 :deep(.ecosystem .section-subtitle),
 :deep(.ecosystem p) { color: rgba(235,244,255,0.6) !important; }
+:deep(.ecosystem .eyebrow::before) { background: var(--sector-accent) !important; }
+:deep(.ecosystem .tile-bg) { background: linear-gradient(135deg, color-mix(in srgb, var(--sector-accent) 28%, #000) 0%, #07090f 100%) !important; }
+:deep(.ecosystem .tile-meta .dot) { background: var(--sector-accent) !important; }
+:deep(.ecosystem .bento-tile:hover) { box-shadow: 0 8px 40px color-mix(in srgb, var(--sector-accent) 22%, transparent) !important; }
 
 /* PricingSection */
 :deep(.pricing) { background: #07090f !important; }
@@ -1059,6 +1063,16 @@ section { padding: clamp(60px, 9vw, 110px) 0; position: relative; }
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+/* Override btn-electric to use sector accent on sector pages */
+.sector-page .btn-electric {
+  background: linear-gradient(135deg, var(--sector-accent) 0%, var(--sector-accent-2, var(--sector-accent)) 100%);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--sector-accent) 30%, transparent);
+  color: var(--sector-btn-text, #fff);
+}
+.sector-page .btn-electric:hover {
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--sector-accent) 45%, transparent);
 }
 
 .btn-wa {

@@ -189,9 +189,9 @@ const videos: Video[] = [
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.72rem; text-transform: uppercase;
   letter-spacing: 0.2em; font-weight: 700;
-  color: #4da8ff; margin-bottom: 18px;
+  color: var(--sector-accent, #4da8ff); margin-bottom: 18px;
 }
-.eyebrow::before { content: ''; width: 20px; height: 1px; background: #4da8ff; }
+.eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--sector-accent, #4da8ff); }
 .section-head h2 { color: #fff; margin-bottom: 18px; }
 .section-head .lead { color: rgba(235,244,255,0.6); line-height: 1.65; }
 .section-head .lead strong { color: #fff; }
