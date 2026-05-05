@@ -91,7 +91,7 @@ onMounted(() => {
         eyebrow="Area Download"
         title="Scarica il framework<br>Denani ITS Network."
         subtitle="Tutti i dettagli del modello replicabile per le 7 filiere ITS in un documento PDF executive."
-        pdf-path="/PDF/Denani Lucchini ITS network.pdf"
+        pdf-path="/PDF/Denani ITS network.pdf"
       />
     </main>
     <SiteFooter />

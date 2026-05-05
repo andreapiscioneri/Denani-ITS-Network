@@ -364,7 +364,7 @@ export const sectors: Record<string, Sector> = {
       eyebrow: 'Area Download',
       title: 'Scarica la proposta<br>Meccatronica.',
       subtitle: 'Tutti i dettagli della strategia marketing per il settore meccatronico in un documento PDF completo.',
-      pdfPath: '/PDF/Denani Lucchini ITS meccatronica-automotive.pdf'
+      pdfPath: '/PDF/Denani ITS meccatronica-automotive.pdf'
     },
 
     meta: {
@@ -485,7 +485,7 @@ export const sectors: Record<string, Sector> = {
       eyebrow: 'Area Download',
       title: 'Scarica la proposta<br>Energia & Ambiente.',
       subtitle: 'Tutti i dettagli della strategia marketing per il settore energetico-ambientale in un documento PDF completo.',
-      pdfPath: '/PDF/Denani Lucchini ITS energia-ambiente.pdf'
+      pdfPath: '/PDF/Denani ITS energia-ambiente.pdf'
     },
 
     meta: {
@@ -601,7 +601,7 @@ export const sectors: Record<string, Sector> = {
       eyebrow: 'Area Download',
       title: 'Scarica la proposta<br>ICT & Digital.',
       subtitle: 'Tutti i dettagli della strategia marketing per il settore ICT in un documento PDF completo.',
-      pdfPath: '/PDF/Denani Lucchini ITS ict-digital.pdf'
+      pdfPath: '/PDF/Denani ITS ict-digital.pdf'
     },
 
     meta: {
@@ -720,7 +720,7 @@ export const sectors: Record<string, Sector> = {
       eyebrow: 'Area Download',
       title: 'Scarica la proposta<br>Agroalimentare.',
       subtitle: 'Tutti i dettagli della strategia marketing per il settore agroalimentare in un documento PDF completo.',
-      pdfPath: '/PDF/Denani Lucchini ITS agroalimentare.pdf'
+      pdfPath: '/PDF/Denani ITS agroalimentare.pdf'
     },
 
     meta: {
@@ -836,7 +836,7 @@ export const sectors: Record<string, Sector> = {
       eyebrow: 'Area Download',
       title: 'Scarica la proposta<br>Sistema Moda.',
       subtitle: 'Tutti i dettagli della strategia marketing per il settore moda in un documento PDF completo.',
-      pdfPath: '/PDF/Denani Lucchini ITS sistema-moda.pdf'
+      pdfPath: '/PDF/Denani ITS sistema-moda.pdf'
     },
 
     meta: {
@@ -927,7 +927,7 @@ export const sectors: Record<string, Sector> = {
 
     scenario: { eyebrow: 'Scenario Economico', title: 'Investimento strategico', lead: 'Piano economico ITS Mobilità & Automotive.', rows: baseScenarioRows, total: '44.500 €' },
 
-    download: { eyebrow: 'Area Download', title: 'Scarica la proposta<br>Mobilità & Automotive.', subtitle: 'Strategia marketing per il settore automotive in un PDF executive.', pdfPath: '/PDF/Denani Lucchini ITS mobilita-automotive.pdf' },
+    download: { eyebrow: 'Area Download', title: 'Scarica la proposta<br>Mobilità & Automotive.', subtitle: 'Strategia marketing per il settore automotive in un PDF executive.', pdfPath: '/PDF/Denani ITS mobilita-automotive.pdf' },
 
     meta: {
       pageTitle: 'Mobilità & Automotive — ITS Academy',
